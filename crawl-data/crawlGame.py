@@ -107,7 +107,7 @@ def crawl_metacritic_games(pages=1):
 
 
 def save_to_csv(data, filename="metacritic_games_raw.csv"):
-    keys = ["Tên game","Release raw","Metascore raw","Critic reviews raw","User Score raw","User ratings raw"]
+    keys = ["Name_game","Release_raw","Metascore_raw","Critic_reviews_raw","User_Score_raw","User_ratings_raw"]
     file_exists = os.path.isfile(filename)
 
     with open(filename, "a", newline="", encoding="utf-8") as f:
