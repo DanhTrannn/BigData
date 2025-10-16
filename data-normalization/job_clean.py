@@ -8,99 +8,100 @@ def parse_salary(s):
     
     s = str(s).lower().strip()
 
-    # Nếu là thỏa thuận
     if any(word in s for word in ['thỏa thuận', 'thoả thuận', 'negotiable']):
         return np.nan, np.nan
 
-    # Bỏ ký tự rác
     s = s.replace(',', '').replace('~', ' ').replace('–', '-')
 
-    # Tìm đơn vị
     is_usd = 'usd' in s
     is_vnd = 'triệu' in s or 'vnd' in s or '₫' in s
 
-    # Lấy số
     nums = re.findall(r'\d+(?:\.\d+)?', s)
     if not nums:
         return np.nan, np.nan
     
     nums = [float(x) for x in nums]
 
-    # Chỉ 1 giá trị -> gán min = max
     if len(nums) == 1:
         min_val, max_val = 0, nums[0]
-    elif len(nums) == 2:
+    else:
         min_val, max_val = nums[0], nums[-1]
     
-    # Nếu đơn vị là triệu
     if is_vnd:
-        min_val *= 1000000
-        max_val *= 1000000
+        min_val *= 1_000_000
+        max_val *= 1_000_000
     elif is_usd:
-        min_val *= 26000
-        max_val *= 26000
+        min_val *= 26_000
+        max_val *= 26_000
     else:
-        # Nếu không có đơn vị mà số nhỏ -> giả định triệu
         if max_val < 1000:
-            min_val *= 1000000
-            max_val *= 1000000
-            
+            min_val *= 1_000_000
+            max_val *= 1_000_000
+
     if max_val == 0:
-        max_val = np.nan
-        min_val = np.nan
+        return np.nan, np.nan
 
     return min_val, max_val
 
 def clean_job_name(name):
-        name = str(name).strip()
-        name = re.sub(r'[–—]', '-', name) 
-        # Cắt tại -, (, _ nếu phần trước có >4 từ
-        parts = re.split(r'[-(_]', name)
-        first_part = parts[0].strip()
-        if len(first_part) > 4:
-            name = first_part
+    name = str(name).strip()
+    name = re.sub(r'[–—]', '-', name)
+    parts = re.split(r'[-(_]', name)
+    first_part = parts[0].strip()
+    if len(first_part) > 4:
+        name = first_part
+    name = re.split(r',\s*(?=(lương|salary|\d|₫|upto))', name, flags=re.IGNORECASE)[0].strip()
+    return name
 
-        # Cắt dấu phẩy thông minh: chỉ cắt nếu sau dấu phẩy có chữ "lương", "salary", số, hoặc "đ"
-        name = re.split(r',\s*(?=(lương|salary|\d|₫|upto))', name, flags=re.IGNORECASE)[0].strip()
+def normalize_required_skills(skills):
+    if pd.isna(skills):
+        return np.nan
 
-        return name
+    s = str(skills).strip()
+    if s.lower() in ['không có', 'none', 'nan', '', 'no', 'null']:
+        return np.nan
 
+    s = s.replace('"', '').replace("'", '')
+    s = re.sub(r'[\n\r\t]', ' ', s)
+    s = re.sub(r'\s*,\s*', '|', s)
+    s = re.sub(r'[;/•\-–—]+', '|', s)
+    s = re.sub(r'\s*\|\s*', '|', s)
+    s = re.sub(r'\s{2,}', ' ', s)
 
-def clean_salary_column(path_in, path_out):
+    skills_list = [w.strip().title() for w in s.split('|') if w.strip()]
+    return '|'.join(skills_list) if skills_list else np.nan
+
+def normalize_job_data(path_in, path_out):
     df = pd.read_csv(path_in, encoding='utf-8-sig')
-    
+
+    # --- Làm sạch Job_Name
     if 'Job_Name' in df.columns:
         df['Job_Name'] = df['Job_Name'].astype(str).apply(clean_job_name)
-    
+
+    #--- Làm sạch Required_Skills
     if 'Required_Skills' in df.columns:
-        df['Required_Skills'] = df['Required_Skills'].replace('', np.nan)
+        df['Required_Skills'] = df['Required_Skills'].astype(str).apply(normalize_required_skills)
         df['Required_Skills'] = df['Required_Skills'].fillna('Không có')
 
-    df[['min_salary', 'max_salary']] = df['Salary_Range'].apply(
-        lambda x: pd.Series(parse_salary(x))
-    )
-    df.drop(columns=['Salary_Range'], inplace=True)
-    df.drop(columns=['Updated_Time'], inplace=True)
-    df.drop(columns=['Detail_Link'], inplace=True)
-    
-    min_min = df['min_salary'].min(skipna=True)
-    min_max = df['max_salary'].min(skipna=True)
+    # --- Làm sạch Salary
+    if 'Salary_Range' in df.columns:
+        df[['min_salary', 'max_salary']] = df['Salary_Range'].apply(lambda x: pd.Series(parse_salary(x)))
+        df.drop(columns=['Salary_Range'], inplace=True, errors='ignore')
 
-    df['min_salary'] = df['min_salary'].fillna(min_min)
-    df['max_salary'] = df['max_salary'].fillna(min_max)
-    
+    # --- Loại bỏ các cột không cần thiết nếu có
+    df.drop(columns=['Updated_Time', 'Detail_Link'], inplace=True, errors='ignore')
+
+    # --- Bổ sung giá trị thiếu
+    if 'min_salary' in df.columns and 'max_salary' in df.columns:
+        df['min_salary'].fillna(df['min_salary'].min(skipna=True), inplace=True)
+        df['max_salary'].fillna(df['max_salary'].min(skipna=True), inplace=True)
+
     df.to_csv(path_out, index=False, encoding='utf-8-sig')
     print(f"File cleaned saved at: {path_out}")
-
     return df
 
-def test(df):
-    data = pd.read_csv(df, encoding='utf-8-sig')
-    data['Required_Skills'] = data['Required_Skills'].replace('Không có', np.nan)
-    print(data['Required_Skills'].isna().sum())
-
-
 if __name__ == "__main__":
-    df_clean = clean_salary_column(r"D:\BigData\Project\Python\BigData\data\topcv_job_trends_all_2291_tins.csv", "topcv_job_trends_clean.csv")
-    #test("topcv_job_trends_clean.csv")
+    input_path = r"clean-data\topcv_job_trends_clean.csv"
+    output_path = r"clean-data\topcv_job_trends_cleaned.csv"
 
+    normalize_job_data(input_path, output_path)
