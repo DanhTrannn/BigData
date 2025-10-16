@@ -68,7 +68,7 @@ def get_game_details(game_url):
 def crawl_metacritic_games(pages=1):
     games_data = []
 
-    for page in range(51, pages + 1):
+    for page in range(102, pages + 1):
         print(f"\nCrawling page {page} ...")
         url = LIST_URL.format(page)
         html = get_html(url)
@@ -89,12 +89,12 @@ def crawl_metacritic_games(pages=1):
                     name = release_year = metascore = critic_reviews = user_score = user_ratings = "N/A"
 
                 games_data.append({
-                    "Tên game": name,
-                    "Release raw": release_year,
-                    "Metascore raw": metascore,
-                    "Critic reviews raw": critic_reviews,
-                    "User Score raw": user_score,
-                    "User ratings raw": user_ratings
+                    "Name_game": name,
+                    "Release": release_year,
+                    "Metascore": metascore,
+                    "Critic_reviews": critic_reviews,
+                    "User_Score": user_score,
+                    "User_ratings": user_ratings
                 })
 
                 print(f"{name} | {metascore} | {critic_reviews} | {user_score} | {user_ratings} | {release_year}")
@@ -106,8 +106,8 @@ def crawl_metacritic_games(pages=1):
     return games_data
 
 
-def save_to_csv(data, filename="metacritic_games_raw.csv"):
-    keys = ["Name_game","Release_raw","Metascore_raw","Critic_reviews_raw","User_Score_raw","User_ratings_raw"]
+def save_to_csv(data, filename="data/metacritic_games_raw.csv"):
+    keys = ["Name_game","Release","Metascore","Critic_reviews","User_Score","User_ratings"]
     file_exists = os.path.isfile(filename)
 
     with open(filename, "a", newline="", encoding="utf-8") as f:
@@ -120,5 +120,5 @@ def save_to_csv(data, filename="metacritic_games_raw.csv"):
 
 
 if __name__ == "__main__":
-    all_games = crawl_metacritic_games(pages=100)
+    all_games = crawl_metacritic_games(pages=120)
     save_to_csv(all_games)

@@ -1,4 +1,4 @@
-Name_game,Release_raw,Metascore_raw,Critic_reviews_raw,User_Score_raw,User_ratings_raw
+Name_game,Release,Metascore,Critic_reviews,User_Score,User_ratings
 The Legend of Zelda: Ocarina of Time,1998,99,Based on 22 Critic Reviews,9.1,"Based on 11,721 User Ratings"
 SoulCalibur,1999,98,Based on 24 Critic Reviews,7.6,Based on 725 User Ratings
 Grand Theft Auto IV,2008,98,Based on 86 Critic Reviews,8.3,"Based on 5,667 User Ratings"
@@ -2398,4 +2398,483 @@ Puzzle Quest: Challenge of the Warlords,2007,82,Based on 41 Critic Reviews,6.8,B
 Lethal League,2014,82,Based on 11 Critic Reviews,7.6,Based on 63 User Ratings
 Mega Man 11,2018,82,Based on 52 Critic Reviews,7.7,Based on 229 User Ratings
 Ninja Five-O,2003,82,Based on 16 Critic Reviews,8.0,Based on 36 User Ratings
-Kathy Rain 2: Soothsayer,2025,82,Based on 13 Critic Reviews,8.9,Based on 7 User Ratings
+Kathy Rain 2: Soothsayer,2025,82,Based on 13 Critic Reviews,8.9,Based on 7 User RatingsKathy Rain 2: Soothsayer,2025,82,Based on 13 Critic Reviews,8.9,Based on 7 User Ratings
+Botanicula,2012,82,Based on 38 Critic Reviews,8.3,Based on 415 User Ratings
+"Nine Hours, Nine Persons, Nine Doors",2010,82,Based on 23 Critic Reviews,8.8,Based on 326 User Ratings
+Darkest Dungeon: The Crimson Court,2017,82,Based on 11 Critic Reviews,6.9,Based on 32 User Ratings
+College Hoops 2K7,2006,82,Based on 22 Critic Reviews,tbd,N/A
+She Remembered Caterpillars,2017,82,Based on 8 Critic Reviews,6.0,Based on 22 User Ratings
+Life is Strange 2: Episode 5 - Wolves,2019,82,Based on 13 Critic Reviews,6.8,Based on 81 User Ratings
+Lil' Guardsman,2024,82,Based on 9 Critic Reviews,7.3,Based on 12 User Ratings
+Joe Danger 2: The Movie,2012,82,Based on 46 Critic Reviews,6.9,Based on 15 User Ratings
+Bookworm Adventures Deluxe,2006,82,Based on 7 Critic Reviews,8.1,Based on 22 User Ratings
+PixelJunk Shooter Ultimate,2014,82,Based on 8 Critic Reviews,7.2,Based on 158 User Ratings
+FIFA 15,2014,82,Based on 47 Critic Reviews,5.9,"Based on 1,253 User Ratings"
+WWE 2K23,2023,82,Based on 59 Critic Reviews,7.0,Based on 225 User Ratings
+de Blob,2008,82,Based on 48 Critic Reviews,7.4,Based on 67 User Ratings
+Wandersong,2018,82,Based on 19 Critic Reviews,8.2,Based on 57 User Ratings
+The Lord of the Rings: The Battle for Middle-Earth (2004),2004,82,Based on 42 Critic Reviews,8.8,Based on 351 User Ratings
+ZEN Pinball 2,2013,82,Based on 12 Critic Reviews,7.1,Based on 88 User Ratings
+Bleach: Dark Souls,2008,82,Based on 28 Critic Reviews,7.4,Based on 25 User Ratings
+Burnout Paradise Remastered,2018,82,Based on 39 Critic Reviews,7.1,Based on 254 User Ratings
+LEGO Star Wars: The Skywalker Saga,2022,82,Based on 63 Critic Reviews,7.7,Based on 788 User Ratings
+Severed,2016,82,Based on 64 Critic Reviews,8.0,Based on 97 User Ratings
+WildStar,2014,82,Based on 52 Critic Reviews,7.6,Based on 961 User Ratings
+DDRMAX2: Dance Dance Revolution,2003,82,Based on 27 Critic Reviews,7.8,Based on 4 User Ratings
+Starship Defense,2010,82,Based on 9 Critic Reviews,6.4,Based on 7 User Ratings
+Starship Defense,2010,82,Based on 9 Critic Reviews,6.4,Based on 7 User Ratings
+Broken Age: Act 1,2014,82,Based on 64 Critic Reviews,7.7,Based on 361 User Ratings
+Azure Striker Gunvolt: Striker Pack,2017,82,Based on 9 Critic Reviews,7.9,Based on 53 User Ratings
+Welcome to Elk,2020,82,Based on 7 Critic Reviews,6.9,Based on 11 User Ratings
+Crypt Custodian,2024,82,Based on 9 Critic Reviews,7.9,Based on 51 User Ratings
+Among Us VR,2022,82,Based on 8 Critic Reviews,6.6,Based on 20 User Ratings
+DDRMAX2: Dance Dance Revolution,2003,82,Based on 27 Critic Reviews,7.8,Based on 4 User Ratings
+ISLANDERS,2019,82,Based on 6 Critic Reviews,8.5,Based on 39 User Ratings
+Fell Seal: Arbiter's Mark,2019,82,Based on 14 Critic Reviews,7.4,Based on 58 User Ratings
+Cyber Shadow,2021,82,Based on 19 Critic Reviews,7.2,Based on 80 User Ratings
+Pixel Ripped 1995,2020,82,Based on 9 Critic Reviews,6.6,Based on 20 User Ratings
+Out of the Park Baseball 9,2008,82,Based on 7 Critic Reviews,7.2,Based on 5 User Ratings
+WildStar,2014,82,Based on 52 Critic Reviews,7.6,Based on 961 User Ratings
+Tales of Graces f Remastered,2025,82,Based on 39 Critic Reviews,8.3,Based on 61 User Ratings
+Strange Antiquities,2025,82,Based on 10 Critic Reviews,7.8,Based on 4 User Ratings
+Wreckfest,2018,81,Based on 32 Critic Reviews,7.5,Based on 356 User Ratings
+A Plague Tale: Innocence,2019,81,Based on 61 Critic Reviews,8.3,"Based on 2,191 User Ratings"
+Horizon Forbidden West: Burning Shores,2023,81,Based on 73 Critic Reviews,4.7,"Based on 2,843 User Ratings"
+Resistance: Retribution,2009,81,Based on 67 Critic Reviews,8.0,Based on 102 User Ratings
+Victoria 3,2022,81,Based on 36 Critic Reviews,6.2,Based on 207 User Ratings
+Hot Shots Golf: Out of Bounds,2008,81,Based on 66 Critic Reviews,7.0,Based on 23 User Ratings
+Quake 4,2005,81,Based on 62 Critic Reviews,7.6,Based on 393 User Ratings
+Siesta Fiesta,2014,81,Based on 16 Critic Reviews,7.4,Based on 15 User Ratings
+Umurangi Generation,2021,81,Based on 13 Critic Reviews,6.5,Based on 11 User Ratings
+Umurangi Generation,2021,81,Based on 13 Critic Reviews,6.5,Based on 11 User Ratings
+Kingdom Hearts HD 2.5 ReMIX,2014,81,Based on 58 Critic Reviews,8.6,Based on 402 User Ratings
+World of Warcraft Classic,2019,81,Based on 17 Critic Reviews,6.3,Based on 305 User Ratings
+Mega Man 10,2010,81,Based on 31 Critic Reviews,8.4,Based on 71 User Ratings
+KORG DS-10 PLUS,2010,81,Based on 7 Critic Reviews,3.8,Based on 5 User Ratings
+Starbound,2016,81,Based on 21 Critic Reviews,7.3,Based on 590 User Ratings
+Condemned: Criminal Origins,2005,81,Based on 72 Critic Reviews,8.1,Based on 199 User Ratings
+Tony Hawk's Project 8,2006,81,Based on 65 Critic Reviews,7.2,Based on 44 User Ratings
+Injustice: Gods Among Us,2013,81,Based on 63 Critic Reviews,7.7,Based on 550 User Ratings
+Nidhogg,2014,81,Based on 43 Critic Reviews,6.9,Based on 170 User Ratings
+NBA 2K8,2007,81,Based on 33 Critic Reviews,6.7,Based on 10 User Ratings
+Battlefield 4,2013,81,Based on 52 Critic Reviews,6.4,"Based on 4,724 User Ratings"
+Yuppie Psycho,2019,81,Based on 15 Critic Reviews,8.3,Based on 100 User Ratings
+Torment: Tides of Numenera,2016,81,Based on 72 Critic Reviews,6.9,Based on 461 User Ratings
+Kalimba,2014,81,Based on 26 Critic Reviews,7.2,Based on 37 User Ratings
+Cytus Alpha,2019,81,Based on 7 Critic Reviews,7.5,Based on 12 User Ratings
+Atelier Arland Series Deluxe Pack,2018,81,Based on 7 Critic Reviews,8.2,Based on 11 User Ratings
+Rusty's Retirement,2024,81,Based on 7 Critic Reviews,7.6,Based on 8 User Ratings
+Fresh Tracks,2025,81,Based on 7 Critic Reviews,tbd,N/A
+NHL 14,2013,81,Based on 30 Critic Reviews,6.4,Based on 104 User Ratings
+Final Fantasy VII Remake Intergrade: Episode INTERmission,2021,81,Based on 24 Critic Reviews,8.2,Based on 203 User Ratings
+To the Moon,2011,81,Based on 26 Critic Reviews,8.9,"Based on 1,678 User Ratings"
+Madden NFL 15,2014,81,Based on 37 Critic Reviews,6.1,Based on 233 User Ratings
+Quadrilateral Cowboy,2016,81,Based on 30 Critic Reviews,7.0,Based on 30 User Ratings
+Quadrilateral Cowboy,2016,81,Based on 30 Critic Reviews,7.0,Based on 30 User Ratings
+The Sims 3: World Adventures,2009,81,Based on 31 Critic Reviews,7.7,Based on 61 User Ratings
+Kingdoms of Amalur: Reckoning - The Legend of Dead Kel,2012,81,Based on 8 Critic Reviews,7.2,Based on 52 User Ratings
+Slime-san: Superslime Edition,2018,81,Based on 11 Critic Reviews,7.1,Based on 18 User Ratings
+Hellblade: Senua's Sacrifice,2017,81,Based on 68 Critic Reviews,7.8,"Based on 2,288 User Ratings"
+Painkiller (2004),2004,81,Based on 62 Critic Reviews,8.2,Based on 353 User Ratings
+GRIME,2021,81,Based on 27 Critic Reviews,7.6,Based on 152 User Ratings
+WarioWare: Touched!,2005,81,Based on 54 Critic Reviews,7.9,Based on 80 User Ratings
+Torchlight,2011,81,Based on 61 Critic Reviews,7.6,Based on 174 User Ratings
+Quake Remastered,2021,81,Based on 8 Critic Reviews,8.1,Based on 71 User Ratings
+Nancy Drew: Danger on Deception Island,2003,81,Based on 7 Critic Reviews,8.0,Based on 21 User Ratings
+Growlanser Generations,2004,81,Based on 19 Critic Reviews,8.1,Based on 25 User Ratings
+Bomberman Ultra,2009,81,Based on 14 Critic Reviews,7.6,Based on 34 User Ratings
+Airborne Assault: Highway to the Reich,2003,81,Based on 11 Critic Reviews,5.6,Based on 5 User Ratings
+Danganronpa V3: Killing Harmony,2017,81,Based on 44 Critic Reviews,7.6,Based on 377 User Ratings
+Shadowrun: Hong Kong,2015,81,Based on 28 Critic Reviews,7.8,Based on 269 User Ratings
+Fieldrunners,2009,81,Based on 11 Critic Reviews,6.7,Based on 6 User Ratings
+Kirby: Planet Robobot,2016,81,Based on 71 Critic Reviews,8.7,Based on 302 User Ratings
+Live A Live,2022,81,Based on 97 Critic Reviews,7.5,Based on 137 User Ratings
+Race Driver 2006,2006,81,Based on 16 Critic Reviews,5.6,Based on 5 User Ratings
+Renegade Ops,2011,81,Based on 36 Critic Reviews,7.8,Based on 23 User Ratings
+Mario & Luigi: Superstar Saga + Bowser's Minions,2017,81,Based on 51 Critic Reviews,8.2,Based on 186 User Ratings
+Guild Wars 2: End of Dragons,2022,81,Based on 12 Critic Reviews,7.4,Based on 135 User Ratings
+Rainbow Billy: The Curse of the Leviathan,2021,81,Based on 8 Critic Reviews,6.9,Based on 15 User Ratings
+Rainbow Billy: The Curse of the Leviathan,2021,81,Based on 8 Critic Reviews,6.9,Based on 15 User Ratings
+Vampire Therapist,2024,81,Based on 8 Critic Reviews,7.4,Based on 5 User Ratings
+Saints Row (2006),2006,81,Based on 74 Critic Reviews,7.5,Based on 227 User Ratings
+Assassin's Creed Shadows,2025,81,Based on 98 Critic Reviews,6.2,"Based on 4,222 User Ratings"
+Hitman - Episode 6: Hokkaido,2016,81,Based on 21 Critic Reviews,7.0,Based on 28 User Ratings
+The Legend of Heroes: Trails to Azure,2023,81,Based on 17 Critic Reviews,7.8,Based on 53 User Ratings
+Art Academy: Lessons for Everyone,2012,81,Based on 14 Critic Reviews,7.6,Based on 27 User Ratings
+Lumines II,2006,81,Based on 46 Critic Reviews,7.6,Based on 14 User Ratings
+Splatoon,2015,81,Based on 88 Critic Reviews,8.7,"Based on 1,519 User Ratings"
+Supreme Commander: Forged Alliance,2007,81,Based on 35 Critic Reviews,8.7,Based on 241 User Ratings
+Drill Dozer,2006,81,Based on 34 Critic Reviews,8.6,Based on 25 User Ratings
+Super One More Jump,2018,81,Based on 10 Critic Reviews,8.3,Based on 37 User Ratings
+The Kids We Were,2021,81,Based on 9 Critic Reviews,tbd,N/A
+Fuser,2020,81,Based on 28 Critic Reviews,6.8,Based on 18 User Ratings
+Sunless Sea,2015,81,Based on 38 Critic Reviews,7.5,Based on 183 User Ratings
+The Walking Dead: Season Two Episode 3 - In Harm's Way,2014,81,Based on 39 Critic Reviews,8.2,Based on 286 User Ratings
+Duke Nukem Advance,2002,81,Based on 15 Critic Reviews,7.3,Based on 16 User Ratings
+Football Manager 2016,2015,81,Based on 34 Critic Reviews,7.1,Based on 152 User Ratings
+Tearaway Unfolded,2015,81,Based on 70 Critic Reviews,7.9,Based on 330 User Ratings
+Trackmania Turbo,2016,81,Based on 52 Critic Reviews,7.5,Based on 249 User Ratings
+Ratchet: Deadlocked,2005,81,Based on 51 Critic Reviews,8.4,Based on 257 User Ratings
+Phantom Brave,2004,81,Based on 40 Critic Reviews,8.3,Based on 23 User Ratings
+Lego Star Wars II: The Original Trilogy,2006,81,Based on 50 Critic Reviews,7.9,Based on 151 User Ratings
+Monster Hunter Freedom Unite,2009,81,Based on 48 Critic Reviews,8.4,Based on 177 User Ratings
+Z.H.P. Unlosing Ranger vs Darkdeath Evilman,2010,81,Based on 19 Critic Reviews,4.7,Based on 84 User Ratings
+Tokyo Mirage Sessions #FE Encore,2020,81,Based on 62 Critic Reviews,6.3,Based on 287 User Ratings
+HASTE: Broken Worlds,2025,81,Based on 6 Critic Reviews,7.4,Based on 28 User Ratings
+Snufkin: Melody of Moominvalley,2024,81,Based on 17 Critic Reviews,8.1,Based on 37 User Ratings
+The Sims 4: Seasons,2018,81,Based on 15 Critic Reviews,6.3,Based on 86 User Ratings
+The Sims 4: Discover University,2019,81,Based on 11 Critic Reviews,5.2,Based on 36 User Ratings
+Saints Row 2,2008,81,Based on 75 Critic Reviews,8.2,Based on 396 User Ratings
+Saltsea Chronicles,2023,81,Based on 8 Critic Reviews,7.3,Based on 12 User Ratings
+Super Mega Baseball 2,2018,81,Based on 21 Critic Reviews,7.2,Based on 26 User Ratings
+TimeSplitters,2000,81,Based on 23 Critic Reviews,7.4,Based on 78 User Ratings
+Star Wars: Jedi Starfighter,2002,81,Based on 22 Critic Reviews,7.8,Based on 31 User Ratings
+NHL Hitz 20-03,2002,81,Based on 19 Critic Reviews,6.9,Based on 10 User Ratings
+Remnant: From the Ashes - Swamps of Corsus,2020,81,Based on 10 Critic Reviews,6.1,Based on 37 User Ratings
+Downwell,2015,81,Based on 20 Critic Reviews,6.8,Based on 180 User Ratings
+Phoenix Wright: Ace Attorney - Dual Destinies,2013,81,Based on 63 Critic Reviews,8.0,Based on 281 User Ratings
+Lone Survivor,2012,81,Based on 24 Critic Reviews,7.4,Based on 158 User Ratings
+NCAA Football 08,2007,81,Based on 30 Critic Reviews,8.1,Based on 11 User Ratings
+WWE 2K24,2024,81,Based on 63 Critic Reviews,6.7,Based on 234 User Ratings
+Deus Ex: Mankind Divided - A Criminal Past,2017,81,Based on 7 Critic Reviews,6.6,Based on 44 User Ratings
+Tails of Iron,2021,81,Based on 13 Critic Reviews,7.6,Based on 138 User Ratings
+The Lion's Song,2018,81,Based on 19 Critic Reviews,7.4,Based on 20 User Ratings
+Call of Duty: Advanced Warfare,2014,81,Based on 53 Critic Reviews,5.8,"Based on 1,276 User Ratings"
+Rising Storm 2: Vietnam,2017,81,Based on 18 Critic Reviews,7.6,Based on 169 User Ratings
+Phantom Dust (2005),2005,81,Based on 37 Critic Reviews,7.6,Based on 37 User Ratings
+The Witcher,2007,81,Based on 50 Critic Reviews,8.3,"Based on 1,369 User Ratings"
+Overcooked! 2,2018,81,Based on 38 Critic Reviews,7.8,Based on 334 User Ratings
+Phoenix Wright: Ace Attorney Trilogy,2014,81,Based on 34 Critic Reviews,8.5,Based on 325 User Ratings
+Kentucky Route Zero - Act I,2013,81,Based on 28 Critic Reviews,7.5,Based on 127 User Ratings
+Jet Lancer,2020,81,Based on 7 Critic Reviews,6.9,Based on 9 User Ratings
+Cotton Reboot!,2021,81,Based on 11 Critic Reviews,6.8,Based on 16 User Ratings
+Hunt: Showdown,2020,81,Based on 25 Critic Reviews,7.1,Based on 299 User Ratings
+Granblue Fantasy Versus: Rising,2023,81,Based on 39 Critic Reviews,7.1,Based on 50 User Ratings
+Irony Curtain: From Matryoshka with Love,2019,81,Based on 11 Critic Reviews,8.0,Based on 32 User Ratings
+Frog Detective 2: The Case of the Invisible Wizard,2019,81,Based on 7 Critic Reviews,7.5,Based on 18 User Ratings
+The Elder Scrolls Online: Dragonhold,2019,81,Based on 7 Critic Reviews,5.0,Based on 23 User Ratings
+Stygian: Reign of the Old Ones,2019,81,Based on 17 Critic Reviews,7.9,Based on 92 User Ratings
+Dishonored: The Brigmore Witches,2013,81,Based on 18 Critic Reviews,8.0,Based on 84 User Ratings
+Virtua Fighter 5 Final Showdown,2012,81,Based on 28 Critic Reviews,7.9,Based on 52 User Ratings
+Life is Strange: Episode 3 - Chaos Theory,2015,81,Based on 33 Critic Reviews,8.3,Based on 236 User Ratings
+Nocturnal,2023,81,Based on 12 Critic Reviews,7.3,Based on 22 User Ratings
+Mega Man Zero 2,2003,81,Based on 17 Critic Reviews,7.9,Based on 64 User Ratings
+Major League Baseball 2K5,2005,81,Based on 25 Critic Reviews,tbd,N/A
+MORDHAU,2019,81,Based on 21 Critic Reviews,7.3,Based on 314 User Ratings
+Paradise Killer,2020,81,Based on 23 Critic Reviews,7.4,Based on 54 User Ratings
+FAST Racing NEO,2015,81,Based on 46 Critic Reviews,8.5,Based on 179 User Ratings
+Gunslugs,2014,81,Based on 8 Critic Reviews,6.9,Based on 23 User Ratings
+Symphony of War: The Nephilim Saga,2022,81,Based on 8 Critic Reviews,7.4,Based on 42 User Ratings
+Sensible World of Soccer,2007,81,Based on 15 Critic Reviews,7.0,Based on 5 User Ratings
+Mighty Milky Way,2011,81,Based on 10 Critic Reviews,8.2,Based on 13 User Ratings
+Brave Fencer Musashi,1998,81,Based on 12 Critic Reviews,8.1,Based on 41 User Ratings
+Pro Race Driver,2002,81,Based on 22 Critic Reviews,7.9,Based on 12 User Ratings
+Time Crisis II,2001,81,Based on 21 Critic Reviews,7.9,Based on 34 User Ratings
+Time Crisis 3,2003,81,Based on 29 Critic Reviews,8.0,Based on 20 User Ratings
+SWAT 3: Elite Edition,2000,81,Based on 9 Critic Reviews,8.4,Based on 50 User Ratings
+Asheron's Call,1999,81,Based on 15 Critic Reviews,8.4,Based on 24 User Ratings
+Borderlands 4,2025,81,Based on 88 Critic Reviews,4.4,Based on 612 User Ratings
+Trauma Center: Under the Knife,2005,81,Based on 45 Critic Reviews,7.1,Based on 25 User Ratings
+Mario Golf: Toadstool Tour,2003,81,Based on 49 Critic Reviews,8.2,Based on 58 User Ratings
+Ghostrunner,2020,81,Based on 65 Critic Reviews,7.9,"Based on 1,059 User Ratings"
+Capcom Fighting Collection 2,2025,81,Based on 36 Critic Reviews,5.4,Based on 21 User Ratings
+EVERSPACE 2,2023,81,Based on 36 Critic Reviews,7.6,Based on 106 User Ratings
+Chessmaster 10th Edition,2004,81,Based on 9 Critic Reviews,7.8,Based on 12 User Ratings
+Fire Emblem: Shadow Dragon,2009,81,Based on 42 Critic Reviews,7.5,Based on 169 User Ratings
+VOEZ,2017,81,Based on 18 Critic Reviews,7.9,Based on 102 User Ratings
+Untitled Goose Game,2019,81,Based on 44 Critic Reviews,7.7,Based on 370 User Ratings
+The Pedestrian,2020,81,Based on 21 Critic Reviews,7.5,Based on 117 User Ratings
+Age of Empires III,2005,81,Based on 52 Critic Reviews,7.9,Based on 773 User Ratings
+Tales of Monkey Island Chapter 5: Rise of the Pirate God,2009,81,Based on 33 Critic Reviews,8.1,Based on 31 User Ratings
+Castlevania: Lords of Shadow - Ultimate Edition,2013,81,Based on 23 Critic Reviews,7.5,Based on 687 User Ratings
+Strong Bad's Cool Game for Attractive People Episode 2: Strong Badia the Free,2008,81,Based on 22 Critic Reviews,7.4,Based on 15 User Ratings
+Toy Soldiers: Cold War,2011,81,Based on 46 Critic Reviews,8.0,Based on 102 User Ratings
+Elroy And The Aliens,2025,81,Based on 7 Critic Reviews,8.4,Based on 17 User Ratings
+A Highland Song,2023,81,Based on 20 Critic Reviews,5.4,Based on 8 User Ratings
+The Cat Lady,2012,81,Based on 11 Critic Reviews,8.7,Based on 266 User Ratings
+Suzerain,2020,81,Based on 12 Critic Reviews,8.1,Based on 98 User Ratings
+Assassin's Creed,2007,81,Based on 77 Critic Reviews,7.2,"Based on 1,913 User Ratings"
+Skylanders SuperChargers,2015,81,Based on 51 Critic Reviews,5.5,Based on 76 User Ratings
+ilomilo,2011,81,Based on 53 Critic Reviews,8.3,Based on 63 User Ratings
+Bionic Bay,2025,81,Based on 17 Critic Reviews,8.9,Based on 7 User Ratings
+Atelier Ryza 3: Alchemist of the End & the Secret Key,2023,81,Based on 22 Critic Reviews,7.5,Based on 101 User Ratings
+Vessel (2012),2012,81,Based on 26 Critic Reviews,7.7,Based on 132 User Ratings
+Captain Toad: Treasure Tracker,2014,81,Based on 78 Critic Reviews,8.5,Based on 563 User Ratings
+Songs Of Silence,2024,81,Based on 7 Critic Reviews,8.3,Based on 36 User Ratings
+Fire Emblem Echoes: Shadows of Valentia,2017,81,Based on 76 Critic Reviews,8.6,Based on 460 User Ratings
+Phoenix Wright: Ace Attorney,2005,81,Based on 53 Critic Reviews,8.9,Based on 398 User Ratings
+Life is Strange: Episode 5 - Polarized,2015,81,Based on 30 Critic Reviews,8.4,Based on 284 User Ratings
+Uno,2006,81,Based on 24 Critic Reviews,7.2,Based on 53 User Ratings
+Mario & Luigi: Dream Team,2013,81,Based on 75 Critic Reviews,8.3,Based on 484 User Ratings
+Everhood,2021,81,Based on 15 Critic Reviews,7.7,Based on 62 User Ratings
+Trials of Fire,2021,81,Based on 15 Critic Reviews,6.5,Based on 17 User Ratings
+Wunderling,2020,81,Based on 7 Critic Reviews,7.9,Based on 8 User Ratings
+echochrome,2008,81,Based on 32 Critic Reviews,5.6,Based on 15 User Ratings
+Fly Together!,2021,81,Based on 8 Critic Reviews,5.0,Based on 4 User Ratings
+N/A,N/A,N/A,N/A,N/A,N/A
+Gothic,2001,81,Based on 14 Critic Reviews,8.6,"Based on 1,371 User Ratings"
+Chessmaster 9000,2002,81,Based on 10 Critic Reviews,6.9,Based on 10 User Ratings
+Empires: Dawn of the Modern World,2003,81,Based on 22 Critic Reviews,8.5,Based on 29 User Ratings
+Mega Man Anniversary Collection,2004,81,Based on 32 Critic Reviews,7.4,Based on 32 User Ratings
+NASCAR Heat,2000,81,Based on 13 Critic Reviews,6.7,Based on 6 User Ratings
+Helldivers,2015,81,Based on 56 Critic Reviews,7.9,Based on 585 User Ratings
+Fly Together!,2021,81,Based on 8 Critic Reviews,5.0,Based on 4 User Ratings
+Professor Layton and the Azran Legacy,2014,81,Based on 58 Critic Reviews,8.0,Based on 135 User Ratings
+PlanetSide,2003,81,Based on 31 Critic Reviews,7.8,Based on 24 User Ratings
+Company of Heroes 2: Ardennes Assault,2014,81,Based on 38 Critic Reviews,6.4,Based on 90 User Ratings
+Tales From The Borderlands: Episode 3 - Catch A Ride,2015,81,Based on 24 Critic Reviews,8.2,Based on 147 User Ratings
+The Walking Dead: Season Two Episode 2 - A House Divided,2014,81,Based on 40 Critic Reviews,8.5,Based on 398 User Ratings
+Rune Factory 4 Special,2020,81,Based on 32 Critic Reviews,8.3,Based on 87 User Ratings
+Finding Paradise,2017,81,Based on 18 Critic Reviews,8.4,Based on 234 User Ratings
+The Legend of Heroes: Trails into Reverie,2023,81,Based on 20 Critic Reviews,7.6,Based on 86 User Ratings
+Broken Age,2015,81,Based on 21 Critic Reviews,7.1,Based on 226 User Ratings
+Life is Strange: Episode 4 - Dark Room,2015,81,Based on 33 Critic Reviews,8.5,Based on 278 User Ratings
+Boomerang X,2021,81,Based on 25 Critic Reviews,6.8,Based on 26 User Ratings
+Sam & Max: The Devil's Playhouse - Episode 1: The Penal Zone,2010,81,Based on 30 Critic Reviews,8.5,Based on 25 User Ratings
+Sunset Overdrive,2014,81,Based on 89 Critic Reviews,7.9,"Based on 1,623 User Ratings"
+Toy Soldiers,2010,81,Based on 40 Critic Reviews,7.2,Based on 51 User Ratings
+Life is Strange: True Colors,2021,81,Based on 67 Critic Reviews,6.9,Based on 677 User Ratings
+Stormland,2019,81,Based on 17 Critic Reviews,7.7,Based on 34 User Ratings
+The Walking Dead: The Telltale Series - A New Frontier Episode 1: Ties That Bind Part One,2016,81,Based on 35 Critic Reviews,7.1,Based on 308 User Ratings
+DG2: Defense Grid 2,2014,81,Based on 21 Critic Reviews,6.8,Based on 98 User Ratings
+Children of the Sun,2024,81,Based on 53 Critic Reviews,6.8,Based on 33 User Ratings
+Mario Tennis: Power Tour,2005,81,Based on 21 Critic Reviews,8.5,Based on 42 User Ratings
+Just Cause 2,2010,81,Based on 74 Critic Reviews,7.7,Based on 380 User Ratings
+RAGE,2011,81,Based on 77 Critic Reviews,6.8,Based on 689 User Ratings
+Napoleon: Total War,2010,81,Based on 56 Critic Reviews,7.9,Based on 438 User Ratings
+Rockstar Games presents Table Tennis,2006,81,Based on 75 Critic Reviews,7.6,Based on 49 User Ratings
+Metal Gear Solid HD Edition,2012,81,Based on 36 Critic Reviews,8.5,Based on 286 User Ratings
+Jak and Daxter Collection,2012,81,Based on 43 Critic Reviews,8.7,Based on 248 User Ratings
+Samurai Shodown,2019,81,Based on 53 Critic Reviews,7.6,Based on 90 User Ratings
+Firewatch,2016,81,Based on 65 Critic Reviews,7.3,"Based on 2,220 User Ratings"
+Stronghold,2001,81,Based on 19 Critic Reviews,8.8,Based on 414 User Ratings
+Kingdom Under Fire: The Crusaders,2004,81,Based on 50 Critic Reviews,8.0,Based on 27 User Ratings
+Zombie Night Terror,2016,81,Based on 21 Critic Reviews,8.1,Based on 47 User Ratings
+The Hex,2018,81,Based on 5 Critic Reviews,7.9,Based on 52 User Ratings
+Children of Zodiarcs,2017,81,Based on 8 Critic Reviews,6.0,Based on 21 User Ratings
+Reigns: Her Majesty,2017,81,Based on 13 Critic Reviews,7.1,Based on 32 User Ratings
+Rune Factory: Guardians of Azuma,2025,81,Based on 25 Critic Reviews,8.2,Based on 52 User Ratings
+OTXO,2023,81,Based on 10 Critic Reviews,7.7,Based on 19 User Ratings
+Okinawa Rush,2021,81,Based on 9 Critic Reviews,7.2,Based on 9 User Ratings
+Personal Trainer: Cooking,2008,81,Based on 12 Critic Reviews,6.2,Based on 6 User Ratings
+Wetrix,N/A,81,Based on 11 Critic Reviews,tbd,N/A
+Red Orchestra: Ostfront 41-45,2006,81,Based on 22 Critic Reviews,8.2,Based on 99 User Ratings
+Karnaaj Rally,2003,81,Based on 9 Critic Reviews,tbd,N/A
+Hot Shots Golf: Open Tee,2005,81,Based on 57 Critic Reviews,5.5,Based on 12 User Ratings
+Shantae: Half-Genie Hero,2016,81,Based on 28 Critic Reviews,7.5,Based on 116 User Ratings
+Borderlands 2: Captain Scarlett and Her Pirate's Booty,2012,81,Based on 13 Critic Reviews,7.4,Based on 72 User Ratings
+Victoria II: Heart of Darkness,2013,81,Based on 7 Critic Reviews,8.7,Based on 96 User Ratings
+Waveform,2012,81,Based on 8 Critic Reviews,7.2,Based on 49 User Ratings
+Bit.Trip Flux,2011,81,Based on 15 Critic Reviews,8.0,Based on 8 User Ratings
+Silicon Dreams,2021,81,Based on 7 Critic Reviews,5.8,Based on 4 User Ratings
+Alisa: Developer's Cut,2024,81,Based on 7 Critic Reviews,7.5,Based on 34 User Ratings
+Deadlink,2024,81,Based on 17 Critic Reviews,7.5,Based on 14 User Ratings
+Sumerian Six,2024,81,Based on 18 Critic Reviews,8.2,Based on 9 User Ratings
+Duck Detective: The Ghost of Glamping,2025,81,Based on 8 Critic Reviews,7.6,Based on 9 User Ratings
+The Elder Scrolls IV: Knights of the Nine,2006,81,Based on 12 Critic Reviews,7.0,Based on 118 User Ratings
+Star Fox 64 3D,2011,81,Based on 65 Critic Reviews,8.0,Based on 303 User Ratings
+Darkest Dungeon II,2023,81,Based on 55 Critic Reviews,6.1,Based on 225 User Ratings
+Yoshi's Island DS,2006,81,Based on 42 Critic Reviews,8.1,Based on 151 User Ratings
+SOCOM: U.S. Navy SEALs Fireteam Bravo 2,2006,81,Based on 31 Critic Reviews,8.1,Based on 21 User Ratings
+Life is Strange 2: Episode 1 - Roads,2018,81,Based on 38 Critic Reviews,6.5,Based on 187 User Ratings
+Freedom Fighters,2003,81,Based on 26 Critic Reviews,7.8,Based on 74 User Ratings
+Phoenix Wright: Ace Attorney - Spirit of Justice,2016,81,Based on 65 Critic Reviews,8.2,Based on 154 User Ratings
+CHUCHEL,2018,81,Based on 24 Critic Reviews,6.8,Based on 111 User Ratings
+Gran Turismo 6,2013,81,Based on 81 Critic Reviews,7.9,"Based on 1,041 User Ratings"
+Dragon Ball: Sparking! Zero,2024,81,Based on 74 Critic Reviews,8.3,"Based on 1,180 User Ratings"
+Strong Bad's Cool Game for Attractive People Episode 4: Dangeresque 3: The Criminal Projective,2008,81,Based on 18 Critic Reviews,7.4,Based on 10 User Ratings
+GoldenEye 007 (2010),2010,81,Based on 79 Critic Reviews,7.7,Based on 240 User Ratings
+Kirby: Nightmare in Dream Land,2002,81,Based on 24 Critic Reviews,8.4,Based on 130 User Ratings
+The Dishwasher: Vampire Smile,2011,81,Based on 55 Critic Reviews,8.2,Based on 34 User Ratings
+Dungeon Encounters,2021,81,Based on 13 Critic Reviews,5.9,Based on 23 User Ratings
+SIFU,2022,81,Based on 79 Critic Reviews,7.9,"Based on 1,207 User Ratings"
+Fate/Samurai Remnant,2023,81,Based on 29 Critic Reviews,8.1,Based on 115 User Ratings
+Persona Q2: New Cinema Labyrinth,2019,81,Based on 36 Critic Reviews,7.6,Based on 96 User Ratings
+Catherine: Full Body,2019,81,Based on 60 Critic Reviews,8.1,Based on 324 User Ratings
+Borderlands 3,2019,81,Based on 53 Critic Reviews,5.6,"Based on 3,278 User Ratings"
+Stranded: Alien Dawn,2023,81,Based on 11 Critic Reviews,7.6,Based on 31 User Ratings
+Earth Defense Force: World Brothers 2,2024,81,Based on 12 Critic Reviews,7.4,Based on 5 User Ratings
+Patapon 2,2009,81,Based on 49 Critic Reviews,8.7,Based on 76 User Ratings
+SnowRunner,2020,81,Based on 23 Critic Reviews,7.1,Based on 363 User Ratings
+CONV/RGENCE: A League of Legends Story,2023,81,Based on 22 Critic Reviews,6.8,Based on 28 User Ratings
+MadWorld,2009,81,Based on 74 Critic Reviews,8.2,Based on 144 User Ratings
+Final Fantasy XV,2016,81,Based on 109 Critic Reviews,7.4,"Based on 5,005 User Ratings"
+The Walking Dead: Saints & Sinners,2020,81,Based on 28 Critic Reviews,8.4,Based on 167 User Ratings
+RollerCoaster Tycoon 3,2004,81,Based on 39 Critic Reviews,6.3,Based on 318 User Ratings
+Dragon's Dogma: Dark Arisen,2016,81,Based on 62 Critic Reviews,7.9,Based on 863 User Ratings
+BAKERU,2024,81,Based on 20 Critic Reviews,7.6,Based on 23 User Ratings
+Genshin Impact,2020,81,Based on 25 Critic Reviews,5.0,"Based on 2,229 User Ratings"
+Puyo Puyo Tetris,2017,81,Based on 54 Critic Reviews,8.1,Based on 234 User Ratings
+AaaaaAAaaaAAAaaAAAAaAAAAA!!!: A Reckless Disregard for Gravity,2009,81,Based on 15 Critic Reviews,6.0,Based on 58 User Ratings
+Guild Wars 2: Heart of Thorns,2015,81,Based on 22 Critic Reviews,7.3,"Based on 1,005 User Ratings"
+Pokemon Puzzle League,2000,81,Based on 15 Critic Reviews,8.0,Based on 49 User Ratings
+The Sims 2 University,2005,81,Based on 31 Critic Reviews,8.3,Based on 34 User Ratings
+The Legend of Heroes: Trails of Cold Steel IV - The End of Saga,2020,81,Based on 33 Critic Reviews,8.5,Based on 205 User Ratings
+Skulls of the Shogun,2013,81,Based on 48 Critic Reviews,6.8,Based on 28 User Ratings
+Happy Game,2021,81,Based on 13 Critic Reviews,7.6,Based on 35 User Ratings
+Borderlands: The Zombie Island of Dr. Ned,2009,81,Based on 23 Critic Reviews,7.9,Based on 54 User Ratings
+SUPERBEAT: XONiC,2015,81,Based on 22 Critic Reviews,7.3,Based on 34 User Ratings
+The Planet Crafter,2022,81,Based on 7 Critic Reviews,5.4,Based on 95 User Ratings
+FORM,2017,81,Based on 7 Critic Reviews,6.5,Based on 4 User Ratings
+MLB 14: The Show,2014,81,Based on 26 Critic Reviews,6.8,Based on 72 User Ratings
+Terraria,2013,81,Based on 39 Critic Reviews,8.4,"Based on 1,064 User Ratings"
+Bravely Second: End Layer,2016,81,Based on 70 Critic Reviews,8.1,Based on 222 User Ratings
+Sid Meier's Civilization: Beyond Earth,2014,81,Based on 78 Critic Reviews,5.5,"Based on 1,109 User Ratings"
+Freedom Planet 2,2024,81,Based on 13 Critic Reviews,7.6,Based on 21 User Ratings
+F1 Manager 2024,2024,81,Based on 14 Critic Reviews,7.4,Based on 54 User Ratings
+Arranger: A Role-Puzzling Adventure,2024,81,Based on 14 Critic Reviews,7.6,Based on 19 User Ratings
+Jagged Alliance 3,2023,81,Based on 49 Critic Reviews,8.0,Based on 181 User Ratings
+EA Sports Active,2009,81,Based on 27 Critic Reviews,6.3,Based on 7 User Ratings
+Assassin's Creed Origins,2017,81,Based on 63 Critic Reviews,7.3,"Based on 4,642 User Ratings"
+Captain Toad: Treasure Tracker - Special Episode,2019,81,Based on 12 Critic Reviews,7.7,Based on 36 User Ratings
+Hatsune Miku: Project Diva f,2014,81,Based on 10 Critic Reviews,8.1,Based on 103 User Ratings
+Tales of Vesperia: Definitive Edition,2019,81,Based on 35 Critic Reviews,7.7,Based on 185 User Ratings
+Halo: Reach Remastered,2019,81,Based on 22 Critic Reviews,7.4,Based on 240 User Ratings
+escapeVektor: Chapter 1,2011,81,Based on 7 Critic Reviews,7.2,Based on 5 User Ratings
+LostWinds,2008,81,Based on 38 Critic Reviews,2.3,Based on 96 User Ratings
+The Bug Butcher,2016,81,Based on 20 Critic Reviews,7.7,Based on 27 User Ratings
+Visage,2020,81,Based on 14 Critic Reviews,6.1,Based on 150 User Ratings
+Final Fantasy XII: Revenant Wings,2007,81,Based on 44 Critic Reviews,7.2,Based on 66 User Ratings
+The Legend of Tianding,2021,81,Based on 10 Critic Reviews,7.4,Based on 39 User Ratings
+"Warhammer 40,000: Chaos Gate - Daemonhunters",2022,81,Based on 37 Critic Reviews,7.0,Based on 87 User Ratings
+Super Scribblenauts,2010,81,Based on 53 Critic Reviews,8.2,Based on 70 User Ratings
+The Legend of Zelda: Skyward Sword HD,2021,81,Based on 106 Critic Reviews,7.6,Based on 988 User Ratings
+Disney's Toontown Online,2005,81,Based on 7 Critic Reviews,7.5,Based on 34 User Ratings
+Combat Mission 3: Afrika Korps,2003,81,Based on 9 Critic Reviews,8.9,Based on 14 User Ratings
+Mario vs. Donkey Kong (2004),2004,81,Based on 43 Critic Reviews,8.1,Based on 65 User Ratings
+Rails Across America,2001,81,Based on 10 Critic Reviews,8.0,Based on 7 User Ratings
+EverQuest: The Planes of Power,2002,81,Based on 10 Critic Reviews,5.6,Based on 5 User Ratings
+007: The World is not Enough,2000,81,Based on 16 Critic Reviews,7.8,Based on 64 User Ratings
+Mortal Kombat: Deception,2004,81,Based on 53 Critic Reviews,8.0,Based on 76 User Ratings
+Flanker 2.0,1999,81,Based on 10 Critic Reviews,7.8,Based on 4 User Ratings
+Embracelet,2020,81,Based on 8 Critic Reviews,6.6,Based on 8 User Ratings
+Wasteland 2,2014,81,Based on 65 Critic Reviews,7.3,"Based on 1,226 User Ratings"
+Muramasa: The Demon Blade,2009,81,Based on 58 Critic Reviews,7.9,Based on 110 User Ratings
+Anno 1800,2019,81,Based on 49 Critic Reviews,7.9,Based on 564 User Ratings
+Minit,2018,81,Based on 27 Critic Reviews,6.6,Based on 69 User Ratings
+Madden NFL 13,2012,81,Based on 36 Critic Reviews,5.8,Based on 194 User Ratings
+Poker Smash (2008),2008,81,Based on 21 Critic Reviews,tbd,N/A
+Jamestown: Legend of the Lost Colony,2011,81,Based on 20 Critic Reviews,7.4,Based on 142 User Ratings
+Castlevania Anniversary Collection,2019,81,Based on 17 Critic Reviews,8.1,Based on 70 User Ratings
+Kohan II: Kings of War,2004,81,Based on 38 Critic Reviews,8.8,Based on 27 User Ratings
+Have a Nice Death,2023,81,Based on 26 Critic Reviews,7.3,Based on 103 User Ratings
+College Hoops 2K8,2007,81,Based on 21 Critic Reviews,5.8,Based on 6 User Ratings
+Star Wars Pinball: The Force Awakens,2016,81,Based on 9 Critic Reviews,4.2,Based on 24 User Ratings
+Midnight Club: Los Angeles,2008,81,Based on 66 Critic Reviews,8.4,Based on 144 User Ratings
+Littlewood,2021,81,Based on 12 Critic Reviews,7.7,Based on 29 User Ratings
+Monster Hunter Stories 2: Wings of Ruin,2021,81,Based on 89 Critic Reviews,8.2,Based on 203 User Ratings
+Metal Gear Online,2008,81,Based on 10 Critic Reviews,8.4,Based on 32 User Ratings
+Xenosaga Episode III: Also sprach Zarathustra,2006,81,Based on 34 Critic Reviews,8.9,Based on 111 User Ratings
+Signalis,2022,81,Based on 32 Critic Reviews,8.4,Based on 299 User Ratings
+Galactic Civilizations III,2015,81,Based on 31 Critic Reviews,7.0,Based on 264 User Ratings
+The Age of Decadence,2015,81,Based on 17 Critic Reviews,7.9,Based on 247 User Ratings
+Moonlighter,2018,81,Based on 28 Critic Reviews,7.1,Based on 230 User Ratings
+Ultros,2024,81,Based on 30 Critic Reviews,8.1,Based on 44 User Ratings
+Stories Untold,2017,81,Based on 21 Critic Reviews,6.9,Based on 111 User Ratings
+Natsu-Mon: 20th Century Summer Kid,2024,81,Based on 14 Critic Reviews,7.6,Based on 7 User Ratings
+Goodbye Volcano High,2023,81,Based on 15 Critic Reviews,5.3,Based on 71 User Ratings
+Shovel Knight Dig,2022,81,Based on 24 Critic Reviews,6.8,Based on 25 User Ratings
+Penko Park,2022,81,Based on 15 Critic Reviews,tbd,N/A
+Pocky & Rocky Reshrined,2022,81,Based on 9 Critic Reviews,7.6,Based on 21 User Ratings
+Pinball Fantasies,2009,81,Based on 7 Critic Reviews,7.5,Based on 4 User Ratings
+Catan (2003),2007,81,Based on 27 Critic Reviews,7.2,Based on 18 User Ratings
+Planet Zoo,2019,81,Based on 55 Critic Reviews,7.9,Based on 231 User Ratings
+Far Cry 5,2018,81,Based on 83 Critic Reviews,7.0,"Based on 3,402 User Ratings"
+Nelly Cootalot: The Fowl Fleet,2016,81,Based on 7 Critic Reviews,7.9,Based on 35 User Ratings
+Slime Rancher,2017,81,Based on 9 Critic Reviews,8.1,Based on 455 User Ratings
+Mark of the Deep,2025,81,Based on 7 Critic Reviews,tbd,N/A
+Stars In The Trash,2024,81,Based on 7 Critic Reviews,9.1,Based on 18 User Ratings
+Railbound,2022,81,Based on 7 Critic Reviews,7.0,Based on 11 User Ratings
+Exo One,2021,81,Based on 16 Critic Reviews,7.1,Based on 60 User Ratings
+Ni no Kuni II: Revenant Kingdom - Prince's Edition,2021,81,Based on 39 Critic Reviews,7.6,Based on 70 User Ratings
+Star Trek: Deep Space Nine: The Fallen,2000,81,Based on 23 Critic Reviews,7.7,Based on 23 User Ratings
+Ooga Booga,2001,81,Based on 11 Critic Reviews,6.4,Based on 12 User Ratings
+Railroad Tycoon II: Gold Edition,2000,81,Based on 11 Critic Reviews,7.7,Based on 11 User Ratings
+Bomberman Generation,2002,81,Based on 19 Critic Reviews,8.3,Based on 24 User Ratings
+Freekstyle,2002,81,Based on 25 Critic Reviews,8.1,Based on 32 User Ratings
+Empire Earth,2001,81,Based on 23 Critic Reviews,8.3,Based on 213 User Ratings
+XGIII: Extreme G Racing,2001,81,Based on 21 Critic Reviews,7.9,Based on 11 User Ratings
+Mass Effect 2: Overlord,2010,81,Based on 12 Critic Reviews,7.7,Based on 104 User Ratings
+Parasite Eve,1998,81,Based on 17 Critic Reviews,8.7,Based on 237 User Ratings
+SaGa Frontier 2 Remastered,2025,81,Based on 9 Critic Reviews,7.3,Based on 15 User Ratings
+Fatal Frame II: Crimson Butterfly,2003,81,Based on 40 Critic Reviews,8.7,Based on 162 User Ratings
+Pokemon Pinball: Ruby & Sapphire,2003,81,Based on 22 Critic Reviews,7.7,Based on 77 User Ratings
+Gunbrella,2023,81,Based on 25 Critic Reviews,7.8,Based on 31 User Ratings
+Maldita Castilla EX: Cursed Castilla,2016,81,Based on 12 Critic Reviews,7.0,Based on 39 User Ratings
+Fast RMX,2017,81,Based on 54 Critic Reviews,8.1,Based on 412 User Ratings
+Sam & Max Episode 101: Culture Shock,2006,81,Based on 47 Critic Reviews,7.7,Based on 27 User Ratings
+Prince of Persia Trilogy,2011,81,Based on 21 Critic Reviews,8.0,Based on 90 User Ratings
+Age of Empires IV,2021,81,Based on 85 Critic Reviews,7.7,Based on 561 User Ratings
+Street Fighter: 30th Anniversary Collection,2018,81,Based on 39 Critic Reviews,7.8,Based on 136 User Ratings
+Danganronpa 2: Goodbye Despair,2014,81,Based on 50 Critic Reviews,8.8,Based on 444 User Ratings
+SteamWorld Heist II,2024,81,Based on 36 Critic Reviews,7.9,Based on 38 User Ratings
+TrackMania 2 Canyon,2011,81,Based on 37 Critic Reviews,7.7,Based on 116 User Ratings
+Motorsport Manager,2016,81,Based on 16 Critic Reviews,8.1,Based on 114 User Ratings
+Gunvolt Chronicles: Luminous Avenger iX,2019,81,Based on 10 Critic Reviews,7.8,Based on 32 User Ratings
+RollerCoaster Tycoon Classic,2024,81,Based on 8 Critic Reviews,8.6,Based on 14 User Ratings
+Death of the Reprobate,2024,81,Based on 9 Critic Reviews,7.0,Based on 10 User Ratings
+Back to the Dawn,2025,81,Based on 12 Critic Reviews,7.9,Based on 15 User Ratings
+Desktop Dungeons: Rewind,2023,81,Based on 9 Critic Reviews,tbd,N/A
+We Love Katamari REROLL+ Royal Reverie,2023,81,Based on 18 Critic Reviews,7.3,Based on 36 User Ratings
+Dragon Ball: Gekishin Squadra,2025,81,Based on 9 Critic Reviews,6.7,Based on 18 User Ratings
+Onimusha: Dawn of Dreams,2006,81,Based on 45 Critic Reviews,8.5,Based on 102 User Ratings
+Battlefield V,2018,81,Based on 52 Critic Reviews,3.6,"Based on 3,770 User Ratings"
+Syberia: The World Before,2022,81,Based on 31 Critic Reviews,8.4,Based on 188 User Ratings
+Pokemon FireRed Version,2004,81,Based on 38 Critic Reviews,8.5,Based on 918 User Ratings
+NBA 2K6,2005,81,Based on 33 Critic Reviews,6.9,Based on 18 User Ratings
+Perfect Dark Zero,2005,81,Based on 75 Critic Reviews,6.4,Based on 150 User Ratings
+Necrobarista,2020,81,Based on 33 Critic Reviews,6.2,Based on 33 User Ratings
+Star Wars Jedi Knight: Jedi Academy,2003,81,Based on 34 Critic Reviews,8.6,Based on 579 User Ratings
+WWE SmackDown vs. Raw 2007,2006,81,Based on 50 Critic Reviews,8.0,Based on 67 User Ratings
+Sine Mora EX,2017,81,Based on 18 Critic Reviews,7.3,Based on 30 User Ratings
+Mortal Kombat Komplete Edition,2013,81,Based on 18 Critic Reviews,8.7,Based on 871 User Ratings
+Ninja Gaiden II,2008,81,Based on 74 Critic Reviews,8.2,Based on 242 User Ratings
+3 Minutes To Midnight,2024,81,Based on 7 Critic Reviews,8.1,Based on 26 User Ratings
+New Star GP,2024,81,Based on 7 Critic Reviews,7.7,Based on 18 User Ratings
+Winds of Change,2021,81,Based on 7 Critic Reviews,8.3,Based on 20 User Ratings
+Kingdom Eighties,2023,81,Based on 8 Critic Reviews,3.9,Based on 22 User Ratings
+ZERO Sievert,2024,81,Based on 7 Critic Reviews,6.8,Based on 17 User Ratings
+Shadowrun: Dragonfall,2014,81,Based on 24 Critic Reviews,8.3,Based on 273 User Ratings
+3 Minutes To Midnight,2024,81,Based on 7 Critic Reviews,8.1,Based on 26 User Ratings
+Great God Grove,2024,81,Based on 6 Critic Reviews,7.4,Based on 11 User Ratings
+Company of Heroes 3,2023,81,Based on 63 Critic Reviews,5.9,Based on 216 User Ratings
+Like a Dragon: Ishin!,2023,81,Based on 77 Critic Reviews,7.4,Based on 236 User Ratings
+MechAssault 2: Lone Wolf,2004,81,Based on 66 Critic Reviews,8.1,Based on 14 User Ratings
+Phoenix Wright: Ace Attorney - Trials and Tribulations,2007,81,Based on 45 Critic Reviews,9.0,Based on 273 User Ratings
+Atelier Ryza 2: Lost Legends & the Secret Fairy,2021,81,Based on 29 Critic Reviews,7.6,Based on 73 User Ratings
+Stellar Blade,2024,81,Based on 134 Critic Reviews,9.2,"Based on 7,791 User Ratings"
+Steins;Gate 0,2016,81,Based on 20 Critic Reviews,8.4,Based on 114 User Ratings
+Pokemon LeafGreen Version,2004,81,Based on 36 Critic Reviews,8.3,Based on 340 User Ratings
+MVP Baseball 2003,2003,81,Based on 22 Critic Reviews,tbd,N/A
+World of Warships,2015,81,Based on 29 Critic Reviews,5.5,Based on 462 User Ratings
+Harvest Moon: Friends of Mineral Town,2003,81,Based on 25 Critic Reviews,7.6,Based on 67 User Ratings
+FIFA Soccer 2005,2004,81,Based on 34 Critic Reviews,7.0,Based on 18 User Ratings
+TOCA Race Driver 2: The Ultimate Racing Simulator,2004,81,Based on 15 Critic Reviews,7.8,Based on 28 User Ratings
+Wargame: European Escalation,2012,81,Based on 28 Critic Reviews,8.2,Based on 227 User Ratings
+Rage of the Gladiator,2010,81,Based on 24 Critic Reviews,7.3,Based on 6 User Ratings
+SteamWorld Quest: Hand of Gilgamech,2019,81,Based on 53 Critic Reviews,7.9,Based on 91 User Ratings
+Kinect Party,2012,81,Based on 7 Critic Reviews,6.7,Based on 20 User Ratings
+Call of Duty: Black Ops III,2015,81,Based on 87 Critic Reviews,5.4,"Based on 3,257 User Ratings"
+Age of Wonders: Planetfall,2019,81,Based on 42 Critic Reviews,7.5,Based on 121 User Ratings
+Atlas Reactor,2016,81,Based on 12 Critic Reviews,7.7,Based on 53 User Ratings
+Etrian Odyssey Nexus,2019,81,Based on 27 Critic Reviews,7.0,Based on 43 User Ratings
+Halo Wars: Definitive Edition,2017,81,Based on 9 Critic Reviews,7.8,Based on 166 User Ratings
+Songbird Symphony,2019,81,Based on 8 Critic Reviews,7.3,Based on 16 User Ratings
+Antihero,2017,81,Based on 14 Critic Reviews,7.0,Based on 24 User Ratings
+Ray'z Arcade Chronology,2023,81,Based on 8 Critic Reviews,tbd,N/A
+Dawn of the Monsters,2022,81,Based on 7 Critic Reviews,6.4,Based on 5 User Ratings
+Fall Guys,2020,81,Based on 52 Critic Reviews,6.8,"Based on 1,630 User Ratings"
+Suikoden I & II HD Remaster: Gate Rune and Dunan Unification Wars,2025,81,Based on 28 Critic Reviews,8.2,Based on 100 User Ratings
+Lost Ark,2022,81,Based on 49 Critic Reviews,4.7,Based on 632 User Ratings
+OutRun 2006: Coast 2 Coast,2006,81,Based on 42 Critic Reviews,8.6,Based on 40 User Ratings
+A Space Shooter for 2 Bucks,2010,81,Based on 15 Critic Reviews,7.7,Based on 12 User Ratings
+The Legend of Zelda: Breath of the Wild - The Champion's Ballad,2017,81,Based on 22 Critic Reviews,8.4,Based on 376 User Ratings
+Void Bastards,2019,81,Based on 27 Critic Reviews,7.0,Based on 105 User Ratings
+Redout (2016),2016,81,Based on 19 Critic Reviews,7.8,Based on 182 User Ratings
+God of War III Remastered,2015,81,Based on 67 Critic Reviews,8.4,"Based on 1,857 User Ratings"
+Super Monkey Ball Deluxe,2005,81,Based on 25 Critic Reviews,7.7,Based on 15 User Ratings
+The 2D Adventures of Rotating Octopus Character,2011,81,Based on 7 Critic Reviews,5.3,Based on 4 User Ratings
+Sam & Max: The Devil's Playhouse - Episode 5: The City That Dares Not Sleep,2010,81,Based on 21 Critic Reviews,8.0,Based on 21 User Ratings
+WRC 9 FIA World Rally Championship,2020,81,Based on 24 Critic Reviews,6.2,Based on 58 User Ratings
+Black Myth: Wukong,2024,81,Based on 87 Critic Reviews,8.2,"Based on 7,857 User Ratings"
+Puzzle Quest 2,2010,81,Based on 32 Critic Reviews,7.1,Based on 14 User Ratings
