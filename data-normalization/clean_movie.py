@@ -99,6 +99,9 @@ def clean_columns(path_input=None, path_output=None, latin = False):
     # === Chuẩn hóa dữ liệu số ===
     df["Metascore"] = pd.to_numeric(df["Metascore"], errors="coerce") / 100
     df["User_Score"] = pd.to_numeric(df["User_Score"], errors="coerce") / 10
+    # Làm tròn 2 chữ số thập phân
+    df["Metascore"] = df["Metascore"].round(2)
+    df["User_Score"] = df["User_Score"].round(2)
     
     # === Lọc các phim có quá ít đánh giá ===
     df["User_Ratings"] = df["User_Ratings"].apply(normalize_value)
@@ -108,9 +111,6 @@ def clean_columns(path_input=None, path_output=None, latin = False):
     # Loại bỏ dòng không thể chuyển sang số
     df = df.dropna(subset=["Metascore", "User_Score"])
 
-    # Làm tròn 2 chữ số thập phân
-    df["Metascore"] = df["Metascore"].round(2)
-    df["User_Score"] = df["User_Score"].round(2)
 
     # Trung bình 2 giá trị
     df["Average"] = ((df["Metascore"] + df["User_Score"]) / 2).round(2)
@@ -119,6 +119,7 @@ def clean_columns(path_input=None, path_output=None, latin = False):
     df["Duration_Minutes"] = df["Duration_Minutes"].apply(duration_to_minutes)
     df["Duration_Minutes"] = df["Duration_Minutes"].replace("N/A", np.nan)
     df = df.dropna(subset=["Duration_Minutes"])
+    df["Duration_Minutes"] = df["Duration_Minutes"].astype(int)
 
     # === Chuẩn hóa Genre ===
     df["Genre"] = df["Genre"].apply(normalize_required_genre)
