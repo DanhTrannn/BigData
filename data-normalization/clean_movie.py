@@ -67,6 +67,14 @@ def normalize_value(x):
         return float(x[:-1]) * 1_000
     else:
         return float(x)
+    
+def get_year(x):
+    s = str(x)
+    digits = ''.join(filter(str.isdigit, s))  # lấy tất cả chữ số
+    if len(digits) >= 4:
+        return int(digits[-4:])  # 4 số cuối
+    else:
+        return int(digits)# ít hơn 4 thì lấy hết
 def clean_columns(path_input=None, path_output=None, latin = False):
 # === Đọc dữ liệu gốc ===
     if latin:
@@ -126,13 +134,7 @@ def clean_columns(path_input=None, path_output=None, latin = False):
     df["Genre"] = df["Genre"].replace("", np.nan)
     df = df.dropna(subset=["Genre"])
 
-    df['Release_Year'] = (
-        df['Release_Year']
-        .astype(str)
-        .str.extract(r'(\d{4})')  # lấy 4 chữ số đầu tiên nếu có text kèm
-        .astype(float)
-        .astype('Int64')  # giữ được NaN
-    )
+    df['Release_Year'] = df['Release_Year'].apply(get_year)
     df.dropna(subset=['Release_Year'], inplace=True)
     df['Release_Year'] = df['Release_Year'].astype(int)
 
@@ -156,4 +158,4 @@ def clean_columns(path_input=None, path_output=None, latin = False):
 
 if __name__ == "__main__":
     #clean_columns("D:\\BigData\\Project\\Python\\BigData\\data\\metacritic_movies.csv", "D:\\BigData\\Project\\Python\\BigData\\clean-data\\movie_data_clean.csv", latin=True)
-    clean_columns(r"D:\BigData\Project\Python\BigData\data\imdb_movie_trends_1550_movies_with_genre.csv", r"D:\BigData\Project\Python\BigData\clean-data\imdb_movie_trends_1550_clean.csv", latin=False)
+    clean_columns(r"D:\BigData\Project\Python\BigData\data\imdb_movie_trends_1550_movies_with_genre.csv", r"D:\BigData\Project\Python\BigData\clean-data\imdb_movie_trends_1550_clean2.csv", latin=False)

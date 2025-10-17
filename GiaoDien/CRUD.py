@@ -69,7 +69,7 @@ INDEX_HTML = """
             <th>Movie_Name</th>
             <th>Release_Year</th>
             <th>Metascore</th>
-            <th>Critic_Reviews</th>
+            <th>Average</th>
             <th>User_Score</th>
             <th>User_Ratings</th>
             <th>Duration_Minutes</th>
@@ -84,7 +84,7 @@ INDEX_HTML = """
             <td>{{ r.Movie_Name }}</td>
             <td>{{ r.Release_Year }}</td>
             <td>{{ r.Metascore }}</td>
-            <td>{{ r.Critic_Reviews }}</td>
+            <td>{{ r.Average }}</td>
             <td>{{ r.User_Score }}</td>
             <td>{{ r.User_Ratings }}</td>
             <td>{{ r.Duration_Minutes }}</td>
@@ -143,10 +143,6 @@ CREATE_HTML = """
           <input class="form-control" name="Metascore">
         </div>
         <div class="mb-3">
-          <label class="form-label">Critic_Reviews</label>
-          <input class="form-control" name="Critic_Reviews">
-        </div>
-        <div class="mb-3">
           <label class="form-label">User Score</label>
           <input class="form-control" name="User_Score">
         </div>
@@ -197,10 +193,6 @@ EDIT_HTML = """
           <input class="form-control" name="Metascore">
         </div>
         <div class="mb-3">
-          <label class="form-label">Critic_Reviews</label>
-          <input class="form-control" name="Critic_Reviews">
-        </div>
-        <div class="mb-3">
           <label class="form-label">User Score</label>
           <input class="form-control" name="User_Score">
         </div>
@@ -243,22 +235,36 @@ spark = SparkSession.builder.appName('FlaskPySparkMovieCRUD').getOrCreate()
 
 
 def read_df():
-    try:
-        df = spark.read.option('header', True).option('inferSchema', True).csv(HDFS_PATH)
-        return df
-    except Exception as e:
-        from pyspark.sql.types import StructType, StructField, StringType
-        schema = StructType([
-            StructField('Movie_Name', StringType(), True),
-            StructField('Release_Year', StringType(), True),
-            StructField('Metascore', StringType(), True),
-            StructField('Critic_Reviews', StringType(), True),
-            StructField('User_Score', StringType(), True),
-            StructField('User_Ratings', StringType(), True),
-            StructField('Duration_Minutes', StringType(), True),
-            StructField('Genre', StringType(), True),
-        ])
-        return spark.createDataFrame(spark.sparkContext.emptyRDD(), schema)
+    from pyspark.sql.types import StructType, StructField, StringType
+    schema = StructType([
+    StructField('Movie_Name', StringType(), True),
+    StructField('Release_Year', StringType(), True),
+    StructField('Metascore', StringType(), True),
+    StructField('User_Score', StringType(), True),
+    StructField('Average', StringType(), True),
+    StructField('User_Ratings', StringType(), True),
+    StructField('Duration_Minutes', StringType(), True),
+    StructField('Genre', StringType(), True),
+    ])
+
+    df = spark.read.option('header', False).schema(schema).csv(HDFS_PATH)
+    return df
+    # try:
+    #     df = spark.read.option('header', True).option('inferSchema', True).csv(HDFS_PATH)
+    #     return df
+    # except Exception as e:
+    #     from pyspark.sql.types import StructType, StructField, StringType
+    #     schema = StructType([
+    #         StructField('Movie_Name', StringType(), True),
+    #         StructField('Release_Year', StringType(), True),
+    #         StructField('Metascore', StringType(), True),
+    #         StructField('User_Score', StringType(), True),
+    #         StructField('Average', StringType(), True),
+    #         StructField('User_Ratings', StringType(), True),
+    #         StructField('Duration_Minutes', StringType(), True),
+    #         StructField('Genre', StringType(), True),
+    #     ])
+    #     return spark.createDataFrame(spark.sparkContext.emptyRDD(), schema)
 
 def write_df(df):
     tmp = HDFS_PATH + '.tmp'
@@ -306,15 +312,14 @@ def create():
         new_title = request.form.get('Movie_Name')
         release = request.form.get('Release_Year')
         metaScore = request.form.get('Metascore')
-        criticReviews = request.form.get('Critic_Reviews')
         userScore = request.form.get('User_Score')
         userRating = request.form.get('User_Ratings')
         duration = request.form.get('Duration_Minutes')
         genres = request.form.get('Genre')
 
         df = read_df()
-        new_row = [(new_title, release, metaScore, criticReviews, userScore, userRating, duration, genres)]
-        cols = ['Movie_Name','Release_Year','Metascore','Critic_Reviews','User_Score', 'User_Ratings', 'Duration_Minutes','Genre']
+        new_row = [(new_title, release, metaScore, userScore, userRating, duration, genres)]
+        cols = ['Movie_Name','Release_Year','Metascore','User_Score', 'User_Ratings', 'Duration_Minutes','Genre']
         new_df = spark.createDataFrame(new_row, cols)
         combined = df.unionByName(new_df, allowMissingColumns=True)
         try:
@@ -339,13 +344,12 @@ def edit(title):
         new_title = request.form.get('Movie_Name') or rec.get('Movie_Name')
         release = request.form.get('Release_Year') or rec.get('Release_Year')
         metaScore = request.form.get('Metascore') or rec.get('Metascore')
-        criticReviews = request.form.get('Critic_Reviews') or rec.get('Critic_Reviews')
         userScore = request.form.get('User_Score') or rec.get('User_Score')
         userRating = request.form.get('User_Ratings') or rec.get('User_Ratings')
         duration = request.form.get('Duration_Minutes') or rec.get('Duration_Minutes')
         genres = request.form.get('Genre') or rec.get('Genre')
 
-        pdf.loc[pdf['Movie_Name'] == title, ['Movie_Name','Release_Year','Metascore','Critic_Reviews','User_Score', 'User_Ratings', 'Duration_Minutes','Genre']] = [new_title, release,metaScore,criticReviews,userScore,userRating,duration,genres]
+        pdf.loc[pdf['Movie_Name'] == title, ['Movie_Name','Release_Year','Metascore','User_Score', 'User_Ratings', 'Duration_Minutes','Genre']] = [new_title, release,metaScore,userScore,userRating,duration,genres]
         new_df = spark.createDataFrame(pdf)
         try:
             write_df(new_df)
