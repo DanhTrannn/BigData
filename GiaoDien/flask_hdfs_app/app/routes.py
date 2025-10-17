@@ -165,14 +165,12 @@ def charts():
             color_discrete_sequence=["#0074D9"],
             opacity=0.85
         )
-        # Thêm đường density (mật độ)
         x_vals = df4["avg_duration"].dropna().values
         kde = gaussian_kde(x_vals)
         x_grid = np.linspace(x_vals.min(), x_vals.max(), 200)
         y_kde = kde(x_grid) * len(x_vals) * (x_grid.max()-x_grid.min())/40  # scale to histogram
         fig4.add_trace(go.Scatter(x=x_grid, y=y_kde, mode='lines', name='Mật độ', line=dict(color='red', width=2, dash='dash')))
 
-        # Thêm nhãn số lượng trên mỗi cột
         fig4.update_traces(texttemplate='%{y}', textposition='outside', marker_line_color='black', marker_line_width=1.2, selector=dict(type='histogram'))
         fig4.update_layout(
             bargap=0.06,
@@ -183,7 +181,6 @@ def charts():
             plot_bgcolor='white',
             margin=dict(l=60, r=20, t=60, b=40)
         )
-        # Annotation giá trị trung bình và lớn nhất
         mean_val = np.mean(x_vals)
         max_val = np.max(x_vals)
         fig4.add_vline(x=mean_val, line_dash="dot", line_color="green", annotation_text=f"Trung bình: {mean_val:.1f}", annotation_position="top left")
