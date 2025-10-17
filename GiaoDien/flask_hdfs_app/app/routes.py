@@ -4,6 +4,9 @@ from app.spark_utils import read_df, write_df
 from flask import current_app as app
 import pandas as pd
 import plotly.express as px
+import numpy as np
+from scipy.stats import gaussian_kde
+import plotly.graph_objects as go
 
 main = Blueprint('main', __name__)
 
@@ -156,15 +159,23 @@ def charts():
         fig4 = px.histogram(
             df4,
             x="avg_duration",
-            nbins=30,
+            nbins=40,
             labels={"avg_duration": "Thời lượng trung bình (phút)", "count": "Số lượng thể loại"},
-            title="Phân bố thời lượng trung bình của các thể loại phim",
-            color_discrete_sequence=["#0074D9"]
+            title="Phân bố chi tiết thời lượng trung bình của các thể loại phim",
+            color_discrete_sequence=["#0074D9"],
+            opacity=0.85
         )
+        # Thêm đường density (mật độ)
+        x_vals = df4["avg_duration"].dropna().values
+        kde = gaussian_kde(x_vals)
+        x_grid = np.linspace(x_vals.min(), x_vals.max(), 200)
+        y_kde = kde(x_grid) * len(x_vals) * (x_grid.max()-x_grid.min())/40  # scale to histogram
+        fig4.add_trace(go.Scatter(x=x_grid, y=y_kde, mode='lines', name='Mật độ', line=dict(color='red', width=2, dash='dash')))
+
         # Thêm nhãn số lượng trên mỗi cột
-        fig4.update_traces(texttemplate='%{y}', textposition='outside', marker_line_color='black', marker_line_width=1.2)
+        fig4.update_traces(texttemplate='%{y}', textposition='outside', marker_line_color='black', marker_line_width=1.2, selector=dict(type='histogram'))
         fig4.update_layout(
-            bargap=0.08,
+            bargap=0.06,
             xaxis_title="Thời lượng trung bình (phút)",
             yaxis_title="Số lượng thể loại",
             xaxis=dict(showgrid=True, gridcolor='lightgrey'),
@@ -172,6 +183,11 @@ def charts():
             plot_bgcolor='white',
             margin=dict(l=60, r=20, t=60, b=40)
         )
+        # Annotation giá trị trung bình và lớn nhất
+        mean_val = np.mean(x_vals)
+        max_val = np.max(x_vals)
+        fig4.add_vline(x=mean_val, line_dash="dot", line_color="green", annotation_text=f"Trung bình: {mean_val:.1f}", annotation_position="top left")
+        fig4.add_vline(x=max_val, line_dash="dot", line_color="orange", annotation_text=f"Lớn nhất: {max_val:.1f}", annotation_position="top right")
         chart4 = fig4.to_html(full_html=False)
     except Exception as e:
         fig4 = px.bar(x=[], y=[], title=f"Error loading avg_duration_by_genre.csv: {e}")
