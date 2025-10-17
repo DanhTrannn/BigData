@@ -1,0 +1,178 @@
+Genre,Avg_Metascore,Avg_User_Score,Movie_Count
+Drama,0.65,0.68,479
+Thriller,0.58,0.64,376
+Action,0.55,0.64,330
+Comedy,0.6,0.66,290
+Adventure,0.58,0.65,248
+Mystery,0.59,0.63,193
+Crime,0.6,0.66,179
+Horror,0.59,0.61,178
+Sci-Fi,0.57,0.63,159
+Fantasy,0.57,0.64,129
+Romance,0.6,0.65,115
+Dark Comedy,0.61,0.66,106
+Psychological Drama,0.71,0.7,88
+Psychological Thriller,0.64,0.65,87
+Biography,0.67,0.72,84
+Period Drama,0.73,0.72,78
+Action Epic,0.61,0.68,77
+Family,0.59,0.66,75
+Docudrama,0.7,0.72,68
+Superhero,0.57,0.65,68
+Epic,0.65,0.69,67
+Animation,0.64,0.7,62
+Psychological Horror,0.64,0.64,62
+Supernatural Horror,0.58,0.62,58
+Coming-Of-Age,0.7,0.71,56
+One-Person Army Action,0.54,0.64,55
+Computer Animation,0.63,0.69,54
+Adventure Epic,0.62,0.67,54
+History,0.7,0.72,53
+Romantic Comedy,0.57,0.64,48
+Whodunnit,0.59,0.65,45
+Suspense Mystery,0.6,0.63,43
+Tragedy,0.72,0.72,42
+Sci-Fi Epic,0.59,0.66,38
+Dark Fantasy,0.58,0.68,38
+Quest,0.58,0.66,37
+Body Horror,0.63,0.67,36
+Folk Horror,0.63,0.66,36
+Satire,0.65,0.65,33
+Fantasy Epic,0.62,0.66,33
+Slasher Horror,0.57,0.61,33
+Musical,0.62,0.63,32
+Music,0.65,0.7,30
+Buddy Comedy,0.55,0.64,30
+Supernatural Fantasy,0.59,0.68,29
+Spy,0.57,0.64,27
+Space Sci-Fi,0.56,0.64,27
+True Crime,0.65,0.68,26
+War,0.63,0.7,26
+Dystopian Sci-Fi,0.58,0.63,26
+Teen Horror,0.58,0.61,26
+Urban Adventure,0.59,0.68,23
+Conspiracy Thriller,0.58,0.62,23
+Quirky Comedy,0.67,0.7,21
+Survival,0.59,0.65,21
+Slapstick,0.54,0.62,21
+Showbiz Drama,0.71,0.71,20
+Teen Comedy,0.7,0.68,20
+Animal Adventure,0.59,0.68,20
+Sport,0.68,0.71,19
+Raunchy Comedy,0.6,0.65,19
+Alien Invasion,0.6,0.64,19
+Artificial Intelligence,0.59,0.66,19
+High-Concept Comedy,0.58,0.65,19
+Teen Drama,0.74,0.71,18
+Monster Horror,0.64,0.72,18
+Hindi,0.61,0.66,18
+Time Travel,0.6,0.66,18
+Feel-Good Romance,0.6,0.65,18
+Hand-Drawn Animation,0.68,0.78,17
+Fairy Tale,0.58,0.63,17
+Heist,0.6,0.65,16
+Holiday,0.56,0.67,16
+Globetrotting Adventure,0.6,0.64,15
+Serial Killer,0.57,0.64,15
+Japanese,0.73,0.81,14
+Teen Adventure,0.66,0.71,13
+Martial Arts,0.59,0.62,13
+Splatter Horror,0.59,0.62,13
+Gun Fu,0.57,0.66,13
+Cyber Thriller,0.57,0.62,13
+Adult Animation,0.7,0.82,12
+Sword & Sorcery,0.65,0.72,12
+Teen Romance,0.65,0.66,12
+Pop Musical,0.61,0.62,12
+Cop Drama,0.58,0.67,12
+Disaster,0.55,0.61,12
+Caper,0.53,0.66,12
+Kaiju,0.51,0.62,12
+Western,0.72,0.7,11
+Anime,0.68,0.82,11
+Legal Drama,0.68,0.76,11
+Road Trip,0.65,0.69,11
+Car Action,0.58,0.66,11
+Holiday Comedy,0.54,0.68,11
+Workplace Drama,0.75,0.68,10
+Historical Epic,0.73,0.73,10
+Spanish,0.73,0.67,10
+War Epic,0.63,0.7,10
+Drug Crime,0.57,0.69,10
+Costume Drama,0.68,0.69,9
+Steamy Romance,0.62,0.63,9
+Jungle Adventure,0.61,0.63,9
+Sea Adventure,0.6,0.67,9
+Cyberpunk,0.55,0.66,9
+French,0.76,0.7,8
+Gangster,0.7,0.71,8
+Dinosaur Adventure,0.52,0.61,8
+Vampire Horror,0.5,0.6,8
+Buddy Cop,0.45,0.62,8
+Political Drama,0.77,0.74,7
+Shōnen,0.63,0.87,7
+Teen Fantasy,0.58,0.66,7
+Zombie Horror,0.58,0.61,7
+Korean,0.84,0.73,6
+Desert Adventure,0.69,0.74,6
+Political Thriller,0.67,0.72,6
+Tragic Romance,0.67,0.69,6
+Erotic Thriller,0.66,0.61,6
+Cozy Mystery,0.62,0.66,6
+Police Procedural,0.58,0.66,6
+Dark Romance,0.58,0.62,6
+Contemporary Western,0.53,0.67,6
+Documentary,0.78,0.76,5
+Witch Horror,0.73,0.67,5
+Prison Drama,0.62,0.66,5
+Holiday Romance,0.59,0.67,5
+Holiday Family,0.52,0.68,5
+Danish,0.81,0.76,4
+Farce,0.71,0.7,4
+Financial Drama,0.7,0.69,4
+Motorsport,0.68,0.73,4
+Legal Thriller,0.64,0.73,4
+Steampunk,0.62,0.67,4
+Basketball,0.61,0.65,4
+B-Horror,0.56,0.64,4
+Jukebox Musical,0.54,0.59,4
+Parody,0.53,0.57,4
+Bumbling Detective,0.49,0.56,4
+Mountain Adventure,0.75,0.75,3
+Swashbuckler,0.74,0.74,3
+Stop Motion Animation,0.73,0.76,3
+German,0.7,0.71,3
+Western Epic,0.69,0.69,3
+Telugu,0.66,0.71,3
+Found Footage Horror,0.66,0.65,3
+B-Action,0.53,0.62,3
+Norwegian,0.77,0.68,2
+Shōjo,0.75,0.76,2
+Mandarin,0.73,0.67,2
+Boxing,0.7,0.69,2
+Romantic Epic,0.65,0.6,2
+Water Sport,0.63,0.73,2
+Body Swap Comedy,0.63,0.65,2
+Hard-Boiled Detective,0.62,0.73,2
+Holiday Animation,0.58,0.73,2
+Sword & Sandal,0.55,0.63,2
+Mockumentary,0.49,0.67,2
+Isekai,0.91,0.74,1
+Portuguese,0.85,0.81,1
+Short,0.85,0.74,1
+Classic Musical,0.85,0.71,1
+Sports Documentary,0.83,0.81,1
+Extreme Sport,0.83,0.81,1
+Nature Documentary,0.82,0.81,1
+Italian,0.76,0.73,1
+Arabic,0.75,0.84,1
+Crime Documentary,0.75,0.72,1
+Kannada,0.72,0.86,1
+Kung Fu,0.71,0.73,1
+Rock Musical,0.69,0.73,1
+Classical Western,0.68,0.66,1
+Stoner Comedy,0.67,0.71,1
+Giallo,0.65,0.7,1
+Screwball Comedy,0.62,0.7,1
+Wuxia,0.54,0.63,1
+Werewolf Horror,0.38,0.56,1

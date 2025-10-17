@@ -6,8 +6,8 @@ import pandas as pd
 import plotly.express as px
 import numpy as np
 from scipy.stats import gaussian_kde
+from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-
 main = Blueprint('main', __name__)
 
 @main.route('/')
@@ -190,8 +190,169 @@ def charts():
         fig4 = px.bar(x=[], y=[], title=f"Error loading avg_duration_by_genre.csv: {e}")
         chart4 = fig4.to_html(full_html=False)
 
+
+    # Chart 5: So sánh điểm số Metacritic và IMDb
+    df_meta = pd.read_csv("data-visualization/result1.csv")
+    df_imdb = pd.read_csv("data-visualization/result2.csv")
+
+    # Merge hai dataset
+    df_merge = pd.merge(df_meta, df_imdb, on='Genre', suffixes=('_meta', '_imdb'))
+
+    # Lấy top 10 thể loại phổ biến nhất dựa trên tổng số phim
+    df_merge['Total_Movies'] = df_merge['Movie_Count_meta'] + df_merge['Movie_Count_imdb']
+    df_top10 = df_merge.nlargest(10, 'Total_Movies')
+
+
+    fig5 = make_subplots(rows=2, cols=1, 
+                        subplot_titles=('Metacritic Scores & Movie Count', 'IMDb Scores & Movie Count'),
+                        shared_xaxes=True,
+                        vertical_spacing=0.15,
+                        specs=[[{"secondary_y": True}],
+                                [{"secondary_y": True}]])
+
+    # Metacritic subplot
+    fig5.add_trace(
+        go.Bar(name='Meta Metascore', x=df_top10['Genre'], y=df_top10['Avg_Metascore_meta'],
+                marker_color='#1f77b4', width=0.35, offset=-0.2),
+        row=1, col=1
+    )
+    fig5.add_trace(
+        go.Bar(name='Meta User Score', x=df_top10['Genre'], y=df_top10['Avg_User_Score_meta'],
+                marker_color='#ff7f0e', width=0.35, offset=0.2),
+        row=1, col=1
+    )
+    fig5.add_trace(
+        go.Scatter(name='Meta Movie Count', x=df_top10['Genre'], y=df_top10['Movie_Count_meta'],
+                    line=dict(color='#2ca02c', width=2), mode='lines+markers'),
+        row=1, col=1, secondary_y=True
+    )
+
+    # IMDb subplot
+    fig5.add_trace(
+        go.Bar(name='IMDb Metascore', x=df_top10['Genre'], y=df_top10['Avg_Metascore_imdb'],
+                marker_color='#1f77b4', width=0.35, offset=-0.2),
+        row=2, col=1
+    )
+    fig5.add_trace(
+        go.Bar(name='IMDb User Score', x=df_top10['Genre'], y=df_top10['Avg_User_Score_imdb'],
+                marker_color='#ff7f0e', width=0.35, offset=0.2),
+        row=2, col=1
+    )
+    fig5.add_trace(
+        go.Scatter(name='IMDb Movie Count', x=df_top10['Genre'], y=df_top10['Movie_Count_imdb'],
+                    line=dict(color='#2ca02c', width=2), mode='lines+markers'),
+        row=2, col=1, secondary_y=True
+    )
+
+    # Update layout
+    fig5.update_layout(
+        title_text="So sánh điểm số và số lượng phim giữa Metacritic và IMDb",
+        template='plotly_white',
+        showlegend=True,
+        height=800,
+        xaxis_tickangle=-45,
+        xaxis2_tickangle=-45
+    )
+
+    # Update y-axes titles
+    fig5.update_yaxes(title_text="Điểm số", row=1, col=1)
+    fig5.update_yaxes(title_text="Số lượng phim", row=1, col=1, secondary_y=True)
+    fig5.update_yaxes(title_text="Điểm số", row=2, col=1)
+    fig5.update_yaxes(title_text="Số lượng phim", row=2, col=1, secondary_y=True)
+    chart5 = fig5.to_html(full_html=False)
+
+    # Chart 6: So sánh tỉ lệ phim chất lượng cao theo năm (Metacritic vs IMDb)
+    df_pct_meta = pd.read_csv("data-visualization/result3.csv", sep='\t', header=None, names=['Year','Value'])
+    df_pct_imdb = pd.read_csv("data-visualization/result4.csv", sep='\t', header=None, names=['Year','Value'])
+
+    # Chuyển kiểu dữ liệu
+    df_pct_meta['Year'] = pd.to_numeric(df_pct_meta['Year'], errors='coerce').astype('Int64')
+    df_pct_meta['Value'] = pd.to_numeric(df_pct_meta['Value'], errors='coerce')
+    df_pct_imdb['Year'] = pd.to_numeric(df_pct_imdb['Year'], errors='coerce').astype('Int64')
+    df_pct_imdb['Value'] = pd.to_numeric(df_pct_imdb['Value'], errors='coerce')
+
+    # Merge theo Year để đảm bảo trục X thống nhất
+    df_pct = pd.merge(df_pct_meta, df_pct_imdb, on='Year', how='outer', suffixes=('_meta', '_imdb'))
+    df_pct = df_pct.sort_values('Year').dropna(subset=['Year'])
+
+
+    fig6 = go.Figure()
+    fig6.add_trace(go.Scatter(x=df_pct['Year'], y=df_pct['Value_meta'], mode='lines+markers', name='Metacritic', line=dict(color='#1f77b4')))
+    fig6.add_trace(go.Scatter(x=df_pct['Year'], y=df_pct['Value_imdb'], mode='lines+markers', name='IMDb', line=dict(color='#ff7f0e')))
+
+    fig6.update_layout(
+        title='Comparison Movie Ratings of Metacritic and IMDB Over Years',
+        xaxis_title='Year',
+        yaxis_title='Percentage of High-Quality Movies (%)',
+        template='plotly_white',
+        height=450
+    )
+
+    chart6 = fig6.to_html(full_html=False)
+
+    file1 = "data-visualization/top_movie_year_imdb.csv"    # Cluster 1
+    file2 = "data-visualization/top_movie_year_movies.csv"  # Cluster 2
+
+    df7 = pd.read_csv(file1)
+    df8 = pd.read_csv(file2)
+
+    # Thêm cột nguồn để phân biệt
+    df7["Source"] = "IMDb"
+    df8["Source"] = "Movies"
+
+    # Gộp dữ liệu
+    df_all = pd.concat([df7, df8])
+
+    # Biểu đồ cột nhóm
+    fig7 = px.bar(
+        df_all,
+        x="Release_Year",
+        y="Metascore",
+        color="Source",
+        barmode="group",
+        text="Movie_Name",
+        title="So sánh Metascore & Tên phim giữa IMDb và Movies theo năm"
+    )
+
+    # Tùy chỉnh hiển thị hover và text
+    fig7.update_traces(
+        textposition="outside",
+        hovertemplate=(
+            "<b>Năm:</b> %{x}<br>"
+            "<b>Phim:</b> %{text}<br>"
+            "<b>Metascore:</b> %{y}<br>"
+            "<b>Nguồn:</b> %{color}<extra></extra>"
+        )
+    )
+
+    # Tùy chỉnh layout
+    fig7.update_layout(
+        xaxis_title="Năm phát hành",
+        yaxis_title="Metascore",
+        title_x=0.5,
+        legend_title="Nguồn dữ liệu",
+        bargap=0.3,
+        height=600
+    )
+
+    chart7 = fig7.to_html(full_html=False)
+
+
+    file3 = "data-visualization/duration_avg.csv"
+    df_duration = pd.read_csv(file3)
+
+    fig8 = px.pie(
+        df_duration,
+        names='duration',
+        values='Average',
+        title='Tỷ lệ điểm trung bình theo độ dài phim',
+        color_discrete_sequence=px.colors.qualitative.Pastel
+    )
+    fig8.update_traces(textinfo='percent+label', pull=[0.05]*len(df_duration))
+    fig8.update_layout(title_x=0.5)
+    chart8 = fig8.to_html(full_html=False)
     return render_template("dashboard.html", 
-                           chart1=chart1, chart2=chart2, chart3=chart3, chart4=chart4)
+                           chart1=chart1, chart2=chart2, chart3=chart3, chart4=chart4, chart5=chart5, chart6=chart6, chart7 = chart7, chart8 = chart8)
 
 
 
