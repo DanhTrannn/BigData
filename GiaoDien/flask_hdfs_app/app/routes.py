@@ -42,10 +42,17 @@ def sync_hdfs():
 @main.route('/create', methods=['GET', 'POST'])
 def create():
     if request.method == 'POST':
-        data = {col: request.form.get(col) for col in ['Movie_Name','Release_Year','Metascore','Critic_Reviews',
+        data = {col: request.form.get(col) for col in ['Movie_Name','Release_Year','Metascore',
                                                        'User_Score','User_Ratings','Duration_Minutes','Genre']}
+        try:
+            metascore = float(data.get('Metascore', 0))
+            userscore = float(data.get('User_Score', 0))
+        except ValueError:
+            metascore, userscore = 0, 0
+        data['Average'] = (metascore + userscore) / 2
+        
         df = read_df(app.spark)
-        new_df = app.spark.createDataFrame([tuple(data.values())], data.keys())
+        new_df = app.spark.createDataFrame([tuple(data.values())], list(data.keys()))
         combined = df.unionByName(new_df, allowMissingColumns=True)
         try:
             write_df(combined, app.spark)
@@ -68,6 +75,13 @@ def edit(title):
     if request.method == 'POST':
         for col in rec.keys():
             pdf.loc[pdf['Movie_Name'] == title, col] = request.form.get(col) or rec[col]
+        try:
+            metascore = float(pdf.loc[pdf['Movie_Name'] == title, 'Metascore'])
+            userscore = float(pdf.loc[pdf['Movie_Name'] == title, 'User_Score'])
+        except ValueError:
+            metascore, userscore = 0, 0
+        
+        pdf.loc[pdf['Movie_Name'] == title, 'Average'] = (metascore + userscore) / 2
         new_df = app.spark.createDataFrame(pdf)
         try:
             write_df(new_df, app.spark)
@@ -103,33 +117,35 @@ def charts():
     fig1 = px.line(df1_top, x="Year", y="Count", color="Genre", markers=True,
                    title="Xu hướng thể loại phim qua các năm")
     chart1 = fig1.to_html(full_html=False)
-    df = pd.read_csv(
-    "data-visualization/top10meta.csv",
-    header=None,
-    names=["Movie_Name", "Release_Year", "Average", "Genre"]
-    )
 
-    # Ép kiểu cột Average về số
-    df["Average"] = pd.to_numeric(df["Average"], errors="coerce")
 
-    # Bỏ các dòng không có điểm trung bình
-    df = df.dropna(subset=["Average"])
+    # df = pd.read_csv(
+    # "data-visualization/top10meta.csv",
+    # header=None,
+    # names=["Movie_Name", "Release_Year", "Average", "Genre"]
+    # )
 
-    # Sắp xếp theo điểm trung bình giảm dần và lấy Top 10 phim
-    df_top10 = df.sort_values(by="Average", ascending=False).head(10)
+    # # Ép kiểu cột Average về số
+    # df["Average"] = pd.to_numeric(df["Average"], errors="coerce")
 
-    # Vẽ biểu đồ Top 10 phim có điểm cao nhất
-    fig2 = px.bar(
-        df_top10,
-        x="Movie_Name",
-        y="Average",
-        color="Genre",
-        title="Top 10 phim có điểm trung bình cao nhất",
-        text="Average"
-    )
-    fig2.update_traces(textposition="outside")
+    # # Bỏ các dòng không có điểm trung bình
+    # df = df.dropna(subset=["Average"])
 
-    chart2 = fig2.to_html(full_html=False)
+    # # Sắp xếp theo điểm trung bình giảm dần và lấy Top 10 phim
+    # df_top10 = df.sort_values(by="Average", ascending=False).head(10)
+
+    # # Vẽ biểu đồ Top 10 phim có điểm cao nhất
+    # fig2 = px.bar(
+    #     df_top10,
+    #     x="Movie_Name",
+    #     y="Average",
+    #     color="Genre",
+    #     title="Top 10 phim có điểm trung bình cao nhất",
+    #     text="Average"
+    # )
+    # fig2.update_traces(textposition="outside")
+
+    # chart2 = fig2.to_html(full_html=False)
 
 
     # Biểu đồ 3: So sánh tỷ lệ UserScore > MetaScore giữa IMDb và Metacritic
@@ -191,14 +207,11 @@ def charts():
         chart4 = fig4.to_html(full_html=False)
 
 
-    # Chart 5: So sánh điểm số Metacritic và IMDb
     df_meta = pd.read_csv("data-visualization/result1.csv")
     df_imdb = pd.read_csv("data-visualization/result2.csv")
 
-    # Merge hai dataset
     df_merge = pd.merge(df_meta, df_imdb, on='Genre', suffixes=('_meta', '_imdb'))
 
-    # Lấy top 10 thể loại phổ biến nhất dựa trên tổng số phim
     df_merge['Total_Movies'] = df_merge['Movie_Count_meta'] + df_merge['Movie_Count_imdb']
     df_top10 = df_merge.nlargest(10, 'Total_Movies')
 
@@ -209,8 +222,6 @@ def charts():
                         vertical_spacing=0.15,
                         specs=[[{"secondary_y": True}],
                                 [{"secondary_y": True}]])
-
-    # Metacritic subplot
     fig5.add_trace(
         go.Bar(name='Meta Metascore', x=df_top10['Genre'], y=df_top10['Avg_Metascore_meta'],
                 marker_color='#1f77b4', width=0.35, offset=-0.2),
@@ -227,7 +238,6 @@ def charts():
         row=1, col=1, secondary_y=True
     )
 
-    # IMDb subplot
     fig5.add_trace(
         go.Bar(name='IMDb Metascore', x=df_top10['Genre'], y=df_top10['Avg_Metascore_imdb'],
                 marker_color='#1f77b4', width=0.35, offset=-0.2),
@@ -244,7 +254,6 @@ def charts():
         row=2, col=1, secondary_y=True
     )
 
-    # Update layout
     fig5.update_layout(
         title_text="So sánh điểm số và số lượng phim giữa Metacritic và IMDb",
         template='plotly_white',
@@ -254,24 +263,20 @@ def charts():
         xaxis2_tickangle=-45
     )
 
-    # Update y-axes titles
     fig5.update_yaxes(title_text="Điểm số", row=1, col=1)
     fig5.update_yaxes(title_text="Số lượng phim", row=1, col=1, secondary_y=True)
     fig5.update_yaxes(title_text="Điểm số", row=2, col=1)
     fig5.update_yaxes(title_text="Số lượng phim", row=2, col=1, secondary_y=True)
     chart5 = fig5.to_html(full_html=False)
 
-    # Chart 6: So sánh tỉ lệ phim chất lượng cao theo năm (Metacritic vs IMDb)
     df_pct_meta = pd.read_csv("data-visualization/result3.csv", sep='\t', header=None, names=['Year','Value'])
     df_pct_imdb = pd.read_csv("data-visualization/result4.csv", sep='\t', header=None, names=['Year','Value'])
 
-    # Chuyển kiểu dữ liệu
     df_pct_meta['Year'] = pd.to_numeric(df_pct_meta['Year'], errors='coerce').astype('Int64')
     df_pct_meta['Value'] = pd.to_numeric(df_pct_meta['Value'], errors='coerce')
     df_pct_imdb['Year'] = pd.to_numeric(df_pct_imdb['Year'], errors='coerce').astype('Int64')
     df_pct_imdb['Value'] = pd.to_numeric(df_pct_imdb['Value'], errors='coerce')
 
-    # Merge theo Year để đảm bảo trục X thống nhất
     df_pct = pd.merge(df_pct_meta, df_pct_imdb, on='Year', how='outer', suffixes=('_meta', '_imdb'))
     df_pct = df_pct.sort_values('Year').dropna(subset=['Year'])
 
@@ -290,20 +295,18 @@ def charts():
 
     chart6 = fig6.to_html(full_html=False)
 
-    file1 = "data-visualization/top_movie_year_imdb.csv"    # Cluster 1
-    file2 = "data-visualization/top_movie_year_movies.csv"  # Cluster 2
+    file1 = "data-visualization/top_movie_year_imdb.csv"
+    file2 = "data-visualization/top_movie_year_movies.csv"
 
     df7 = pd.read_csv(file1)
     df8 = pd.read_csv(file2)
 
-    # Thêm cột nguồn để phân biệt
+
     df7["Source"] = "IMDb"
     df8["Source"] = "Movies"
 
-    # Gộp dữ liệu
-    df_all = pd.concat([df7, df8])
 
-    # Biểu đồ cột nhóm
+    df_all = pd.concat([df7, df8])
     fig7 = px.bar(
         df_all,
         x="Release_Year",
@@ -314,7 +317,6 @@ def charts():
         title="So sánh Metascore & Tên phim giữa IMDb và Movies theo năm"
     )
 
-    # Tùy chỉnh hiển thị hover và text
     fig7.update_traces(
         textposition="outside",
         hovertemplate=(
@@ -325,7 +327,6 @@ def charts():
         )
     )
 
-    # Tùy chỉnh layout
     fig7.update_layout(
         xaxis_title="Năm phát hành",
         yaxis_title="Metascore",
@@ -352,9 +353,7 @@ def charts():
     fig8.update_layout(title_x=0.5)
     chart8 = fig8.to_html(full_html=False)
     return render_template("dashboard.html", 
-                           chart1=chart1, chart2=chart2, chart3=chart3, chart4=chart4, chart5=chart5, chart6=chart6, chart7 = chart7, chart8 = chart8)
-
-
+                           chart1=chart1, chart3=chart3, chart4=chart4, chart5=chart5, chart6=chart6, chart7 = chart7, chart8 = chart8)
 
 
 

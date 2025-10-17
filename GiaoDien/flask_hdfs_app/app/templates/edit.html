@@ -24,10 +24,6 @@
           <input class="form-control" name="Metascore">
         </div>
         <div class="mb-3">
-          <label class="form-label">Critic_Reviews</label>
-          <input class="form-control" name="Critic_Reviews">
-        </div>
-        <div class="mb-3">
           <label class="form-label">User Score</label>
           <input class="form-control" name="User_Score">
         </div>
@@ -44,7 +40,7 @@
           <input class="form-control" name="Genre">
         </div>
         <button class="btn btn-primary">Save</button>
-        <a class="btn btn-secondary" href="{{ url_for('index') }}">Cancel</a>
+        <a class="btn btn-secondary" href="{{ url_for('main.index') }}">Cancel</a>
       </form>
     </div>
   </body>
