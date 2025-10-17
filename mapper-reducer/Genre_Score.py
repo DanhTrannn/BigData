@@ -22,7 +22,7 @@ genre_df = genre_df.withColumn("Genre", trim(col("Genre"))).filter(col("Genre") 
 result = genre_df.groupBy("Genre").agg(
     round(avg("Metascore"), 2).alias("Avg_Metascore"),
     round(avg("User_Score"), 2).alias("Avg_User_Score"),
-    count("*").alias("Movie_Count")   # 🧮 Đếm số lượng phim trong mỗi thể loại
+    count("*").alias("Movie_Count")   # 
 ).orderBy(col("Movie_Count").desc(), col("Avg_Metascore").desc(), col("Avg_User_Score").desc())
 
 # === Ghi kết quả ra HDFS ===
