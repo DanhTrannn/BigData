@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thêm phim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container py-4">
+      <h1>Thêm phim</h1>
+      <form method="post">
+        <div class="mb-3">
+          <label class="form-label">Movie_Name</label>
+          <input class="form-control" name="Movie_Name" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Release_Year</label>
+          <input class="form-control" name="Release_Year">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Metascore</label>
+          <input class="form-control" name="Metascore">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Critic_Reviews</label>
+          <input class="form-control" name="Critic_Reviews">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">User Score</label>
+          <input class="form-control" name="User_Score">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">User_Ratings</label>
+          <input class="form-control" name="User_Ratings">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Duration_Minutes</label>
+          <input class="form-control" name="Duration_Minutes">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Genre</label>
+          <input class="form-control" name="Genre">
+        </div>
+        <button class="btn btn-primary">Save</button>
+        <a class="btn btn-secondary" href="{{ url_for('index') }}">Cancel</a>
+      </form>
+    </div>
+  </body>
+</html>
