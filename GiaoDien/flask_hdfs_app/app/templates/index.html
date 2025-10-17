@@ -12,8 +12,8 @@
       <h1 class="mb-4">Metacritic Movies Dashboard</h1>
 
       <div class="mb-3">
-        <a class="btn btn-primary" href="{{ url_for('create') }}">Thêm</a>
-        <a class="btn btn-secondary" href="{{ url_for('sync_hdfs') }}">Đẩy lên HDFS</a>
+        <a class="btn btn-primary" href="{{ url_for('main.create') }}">Thêm</a>
+        <a class="btn btn-secondary" href="{{ url_for('main.sync_hdfs') }}">Đẩy lên HDFS</a>
       </div>
 
       {% with messages = get_flashed_messages() %}
@@ -53,8 +53,8 @@
             <td>{{ r.Duration_Minutes }}</td>
             <td>{{ r.Genre }}</td>
             <td>
-              <a class="btn btn-sm btn-outline-primary" href="{{ url_for('edit', title=r.Movie_Name) }}">Cập nhật</a>
-              <a class="btn btn-sm btn-outline-danger" href="{{ url_for('delete', title=r.Movie_Name) }}" onclick="return confirm('Delete this movie?')">Xóa</a>
+              <a class="btn btn-sm btn-outline-primary" href="{{ url_for('main.edit', title=r.Movie_Name) }}">Cập nhật</a>
+              <a class="btn btn-sm btn-outline-danger" href="{{ url_for('main.delete', title=r.Movie_Name) }}" onclick="return confirm('Delete this movie?')">Xóa</a>
             </td>
           </tr>
         {% endfor %}

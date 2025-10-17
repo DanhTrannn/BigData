@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession
 import subprocess
 
-HDFS_BASE = "D:\\Hocky1-nam3\\BigData\\Project\\data\\metacritic_movies.csv"
+HDFS_BASE = "D:\\Hocky1-nam3\\BigData\\Project\\BigData\\clean-data\\movie_data_clean.csv"
 
 def read_df(spark: SparkSession):
     try:

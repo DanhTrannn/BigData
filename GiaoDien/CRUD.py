@@ -239,9 +239,7 @@ app = Flask(__name__, template_folder=TEMPLATES_DIR)
 app.secret_key = os.environ.get('FLASK_SECRET', 'change-me')
 
 
-spark = SparkSession.builder \
-    .appName('FlaskPySparkMovieCRUD') \
-    .getOrCreate()
+spark = SparkSession.builder.appName('FlaskPySparkMovieCRUD').getOrCreate()
 
 
 def read_df():
