@@ -117,6 +117,8 @@ def clean_columns(path_input=None, path_output=None, latin = False):
 
     # === Chuẩn hóa Duration ===
     df["Duration_Minutes"] = df["Duration_Minutes"].apply(duration_to_minutes)
+    df["Duration_Minutes"] = df["Duration_Minutes"].replace("N/A", np.nan)
+    df = df.dropna(subset=["Duration_Minutes"])
 
     # === Chuẩn hóa Genre ===
     df["Genre"] = df["Genre"].apply(normalize_required_genre)
@@ -152,5 +154,5 @@ def clean_columns(path_input=None, path_output=None, latin = False):
     print(f"Tổng số dòng sau xử lý: {len(df)}")
 
 if __name__ == "__main__":
-    clean_columns("D:\\BigData\\Project\\Python\\BigData\\data\\metacritic_movies.csv", "D:\\BigData\\Project\\Python\\BigData\\clean-data\\movie_data_clean.csv", latin=True)
+    #clean_columns("D:\\BigData\\Project\\Python\\BigData\\data\\metacritic_movies.csv", "D:\\BigData\\Project\\Python\\BigData\\clean-data\\movie_data_clean.csv", latin=True)
     clean_columns(r"D:\BigData\Project\Python\BigData\data\imdb_movie_trends_1550_movies_with_genre.csv", r"D:\BigData\Project\Python\BigData\clean-data\imdb_movie_trends_1550_clean.csv", latin=False)
