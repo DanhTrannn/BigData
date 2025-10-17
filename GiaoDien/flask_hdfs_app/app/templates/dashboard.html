@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>🎬 Movie Analytics Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🎬 Movie Analytics Dashboard</h1>
+    </header>
+
+    <main class="dashboard">
+        <section class="chart-card">
+            <h2>Xu hướng thể loại phim qua các năm</h2>
+            {{ chart1|safe }}
+        </section>
+
+        <section class="chart-card">
+            <h2>Top 10 phim có chênh lệch điểm metascore và userscore ít nhất</h2>
+            {{ chart2|safe }}
+        </section>
+
+        <section class="chart-card">
+            <h2>Ten bieu do</h2>
+            {{ chart3|safe }}
+        </section>
+
+        <section class="chart-card">
+            <h2>Ten bieu do</h2>
+            {{ chart4|safe }}
+        </section>
+        
+        <section class="chart-card">
+            <h2>Ten bieu do</h2>
+            {{ chart5|safe }}
+        </section>
+
+        <section class="chart-card">
+            <h2>Ten bieu do</h2>
+            {{ chart6|safe }}
+        </section>
+
+        <section class="chart-card">
+            <h2>Ten bieu do</h2>
+            {{ chart7|safe }}
+        </section>
+
+        <section class="chart-card">
+            <h2>Ten bieu do</h2>
+            {{ chart8|safe }}
+        </section>
+    </main>
+</body>
+</html>

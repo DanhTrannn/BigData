@@ -89,19 +89,64 @@ def delete(title):
     return redirect(url_for('main.index'))
 
 # ---------- Charts ----------
-# @main.route('/charts')
-# def charts():
-#     df = read_df(app.spark)
-#     pdf = df.toPandas().fillna('')
-#     genre_count = pdf['Genre'].value_counts().reset_index()
-#     genre_count.columns = ['Genre', 'Count']
+@main.route('/dashboard')
+def charts():
+    # Bieu do cua danhhh
+    df1 = pd.read_csv("data-visualization/genre_trend.csv", header=None, names=["Year", "Genre", "Count"])
+    df1["Count"] = pd.to_numeric(df1["Count"], errors="coerce")
+    df1 = df1.dropna(subset=["Count"])
+    top_genres = df1.groupby("Genre")["Count"].sum().nlargest(5).index
+    df1_top = df1[df1["Genre"].isin(top_genres)]
+    fig1 = px.line(df1_top, x="Year", y="Count", color="Genre", markers=True,
+                   title="Xu hướng thể loại phim qua các năm")
+    chart1 = fig1.to_html(full_html=False)
+    df = pd.read_csv(
+    "data-visualization/top10meta.csv",
+    header=None,
+    names=["Movie_Name", "Release_Year", "Average", "Genre"]
+    )
 
-#     fig = px.bar(genre_count, x='Genre', y='Count', title='Số lượng phim theo Genre')
-#     chart_html = Markup(fig.to_html(full_html=False))
-#     return render_template('charts.html', chart_html=chart_html)
+    # Ép kiểu cột Average về số
+    df["Average"] = pd.to_numeric(df["Average"], errors="coerce")
 
-# ---------- API ----------
-# @main.route('/api/movies')
-# def api_movies():
-#     df = read_df(app.spark)
-#     return jsonify(df.fillna('').toPandas().to_dict(orient='records'))
+    # Bỏ các dòng không có điểm trung bình
+    df = df.dropna(subset=["Average"])
+
+    # Sắp xếp theo điểm trung bình giảm dần và lấy Top 10 phim
+    df_top10 = df.sort_values(by="Average", ascending=False).head(10)
+
+    # Vẽ biểu đồ Top 10 phim có điểm cao nhất
+    fig2 = px.bar(
+        df_top10,
+        x="Movie_Name",
+        y="Average",
+        color="Genre",
+        title="Top 10 phim có điểm trung bình cao nhất",
+        text="Average"
+    )
+    fig2.update_traces(textposition="outside")
+
+    chart2 = fig2.to_html(full_html=False)
+
+
+    # Bieu do cua khoa: 4 5 
+    # --- Biểu đồ 3 (ví dụ: heatmap giả lập) ---
+    data = {
+        "Year": [2018, 2019, 2020, 2021, 2022],
+        "Drama": [120, 150, 180, 210, 230],
+        "Action": [100, 130, 160, 180, 200],
+        "Comedy": [90, 120, 140, 170, 190],
+    }
+    df3 = pd.DataFrame(data)
+    fig3 = px.imshow(df3.set_index("Year").T, text_auto=True, aspect="auto", 
+                     title="Tăng trưởng từng thể loại theo năm")
+    chart3 = fig3.to_html(full_html=False)
+
+    return render_template("dashboard.html", 
+                           chart1=chart1, chart2=chart2, chart3=chart3)
+
+
+
+
+
+
