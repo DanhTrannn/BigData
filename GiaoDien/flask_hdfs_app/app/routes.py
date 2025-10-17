@@ -4,6 +4,9 @@ from app.spark_utils import read_df, write_df
 from flask import current_app as app
 import pandas as pd
 import plotly.express as px
+import numpy as np
+from scipy.stats import gaussian_kde
+import plotly.graph_objects as go
 
 main = Blueprint('main', __name__)
 
@@ -129,21 +132,66 @@ def charts():
     chart2 = fig2.to_html(full_html=False)
 
 
-    # Bieu do cua khoa: 4 5 
-    # --- Biểu đồ 3 (ví dụ: heatmap giả lập) ---
-    data = {
-        "Year": [2018, 2019, 2020, 2021, 2022],
-        "Drama": [120, 150, 180, 210, 230],
-        "Action": [100, 130, 160, 180, 200],
-        "Comedy": [90, 120, 140, 170, 190],
-    }
-    df3 = pd.DataFrame(data)
-    fig3 = px.imshow(df3.set_index("Year").T, text_auto=True, aspect="auto", 
-                     title="Tăng trưởng từng thể loại theo năm")
-    chart3 = fig3.to_html(full_html=False)
+    # Biểu đồ 3: So sánh tỷ lệ UserScore > MetaScore giữa IMDb và Metacritic
+    try:
+        df_ratio = pd.read_csv("data-visualization/ratio-userscore-vs-metascore.csv")
+        labels = ["IMDb", "Metacritic"]
+        ratios = df_ratio['ratio'].astype(float).fillna(0).tolist()
+        if len(ratios) != len(labels):
+            if len(ratios) < len(labels):
+                labels = labels[:len(ratios)]
+            else:
+                extra = [f"Row {i+1}" for i in range(len(labels), len(ratios))]
+                labels = labels + extra
+
+        fig3 = px.bar(x=labels, y=ratios, labels={'x':'Source','y':'Ratio (User > Meta)'},
+                      title='Tỷ lệ số phim UserScore > MetaScore (IMDb vs Metacritic)')
+        fig3.update_traces(text=[f"{r:.3f}" for r in ratios], textposition='outside')
+        chart3 = fig3.to_html(full_html=False)
+    except Exception as e:
+        fig3 = px.bar(x=[], y=[], title=f"Error loading ratio CSV: {e}")
+        chart3 = fig3.to_html(full_html=False)
+
+
+    # Biểu đồ 4: Histogram phân bố thời lượng trung bình các thể loại
+    try:
+        df4 = pd.read_csv("data-visualization/avg_duration_by_genre.csv")
+        fig4 = px.histogram(
+            df4,
+            x="avg_duration",
+            nbins=40,
+            labels={"avg_duration": "Thời lượng trung bình (phút)", "count": "Số lượng thể loại"},
+            title="Phân bố chi tiết thời lượng trung bình của các thể loại phim",
+            color_discrete_sequence=["#0074D9"],
+            opacity=0.85
+        )
+        x_vals = df4["avg_duration"].dropna().values
+        kde = gaussian_kde(x_vals)
+        x_grid = np.linspace(x_vals.min(), x_vals.max(), 200)
+        y_kde = kde(x_grid) * len(x_vals) * (x_grid.max()-x_grid.min())/40  # scale to histogram
+        fig4.add_trace(go.Scatter(x=x_grid, y=y_kde, mode='lines', name='Mật độ', line=dict(color='red', width=2, dash='dash')))
+
+        fig4.update_traces(texttemplate='%{y}', textposition='outside', marker_line_color='black', marker_line_width=1.2, selector=dict(type='histogram'))
+        fig4.update_layout(
+            bargap=0.06,
+            xaxis_title="Thời lượng trung bình (phút)",
+            yaxis_title="Số lượng thể loại",
+            xaxis=dict(showgrid=True, gridcolor='lightgrey'),
+            yaxis=dict(showgrid=True, gridcolor='lightgrey'),
+            plot_bgcolor='white',
+            margin=dict(l=60, r=20, t=60, b=40)
+        )
+        mean_val = np.mean(x_vals)
+        max_val = np.max(x_vals)
+        fig4.add_vline(x=mean_val, line_dash="dot", line_color="green", annotation_text=f"Trung bình: {mean_val:.1f}", annotation_position="top left")
+        fig4.add_vline(x=max_val, line_dash="dot", line_color="orange", annotation_text=f"Lớn nhất: {max_val:.1f}", annotation_position="top right")
+        chart4 = fig4.to_html(full_html=False)
+    except Exception as e:
+        fig4 = px.bar(x=[], y=[], title=f"Error loading avg_duration_by_genre.csv: {e}")
+        chart4 = fig4.to_html(full_html=False)
 
     return render_template("dashboard.html", 
-                           chart1=chart1, chart2=chart2, chart3=chart3)
+                           chart1=chart1, chart2=chart2, chart3=chart3, chart4=chart4)
 
 
 
